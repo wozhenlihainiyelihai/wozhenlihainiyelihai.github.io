@@ -1,29 +1,47 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "一篇遗憾烂尾的小说"
 date:   2025-06-02 11:48:23 +0800
-categories: jekyll update
+categories: fiction story
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+他把伞稍稍抬高，眼睛环视四周。  
+裸露的墙壁，翠绿的树叶，泥泞的小巷，杂乱的广告。  
+他把手放进大衣口袋，里面静静地躺着一张揉皱的纸，他摸了摸，又搓了搓，把纸团得更紧了。  
 
-Jekyll requires blog post files to be named according to the following format:
+身后传来脚步声，他没有回头。  
 
-`YEAR-MONTH-DAY-title.MARKUP`
+叮咚～门铃声响起。  
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+开门的是一个刘海挡眼睛的男青年，抬头似乎在仰视着他。  
+“请进。”  
 
-Jekyll also offers powerful support for code snippets:
+他把伞收起，转身抖了抖水，交给男青年，然后低头进门，把皮鞋脱下。  
+“呼～你是……”  
+男青年接过伞，随手放在鞋柜旁的塑料桶里，“您先进屋，后面还有客人。”语气平平淡淡，不过隐约有些不耐烦。  
+“……好的。”他想起刚才身后的脚步声。  
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+他换上了拖鞋，迈步进屋，眯了眯眼，逐渐适应昏暗的灯光。  
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+狭窄而短促的甬道直接通往摆放着大圆桌的客厅。  
+5 个，他心里默念。  
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+“好久不见啊，老同学。”一个寸头大块头坐在圆桌最靠门口的位置，腿不自然地搭在过道，这样拥挤的座位委实有些为难他了。  
+
+顺时针方向，是一个戴圆眼镜的清瘦男人，男人的眼神和他一接触就飞快地移开了，嘴角不自然地抽动。  
+
+眼镜男旁边，是一个大波浪的高大女人，画着精致的全包眼线，厚唇上涂着辣椒颜色的口红，她只是冷冷地瞟了他一眼，随即低头继续划着手机屏幕。  
+
+“确实呢，咱们几个这么多年，还是第一次见面……”  
+说这话的，他转头望去，是坐在最角落里的齐肩短发女人，眼睛很大，像杂志里的日本女明星。  
+
+第 5 个，自然就是……  
+
+他的肩膀被一只手拍了一下，倏忽间，脑中的思绪翻涌起来。  
+
+“我说，过了这几年，你小子混的不错，穿的这么有品，以前真是小看你了。”  
+他缓缓转头，身后站着一个穿卫衣的卷发男人，男人的手搭在他的肩膀上，还使劲捏了捏。  
+
+“走吧，站在这干什么。”卷发男拍拍他的肩膀，从他身边挤过去。  
+
+咚，咚……  
+一步一步，卷发男的脚步声停下了，突然向后直挺挺地倒去。
