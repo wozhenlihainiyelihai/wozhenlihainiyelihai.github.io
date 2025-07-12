@@ -1,0 +1,1667 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习 12</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        (function() {
+            try {
+                const theme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (theme === 'dark' || (!theme && prefersDark)) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+</head>
+<body>
+    <div id="toast-container"></div>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="home-button" title="返回主页">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </a>
+            <h1 class="page-title">练习 12</h1>
+            <div class="theme-switcher" id="theme-switcher" title="切换主题">
+                <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </div>
+        </div>
+        
+    <div class="question-block" id="q-1197" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1197</span>
+                <p>【单选】新中国成立初期，党对解决香港.澳门问题进行了积极探索，采取的方针是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1197')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1197" value="A"><span>A</span> A.暂时不提，以后再说</label><label><input type="radio" name="q-1197" value="B"><span>B</span> B.准备条件，一举收回</label><label><input type="radio" name="q-1197" value="C"><span>C</span> C.暂时不动，待机收回</label><label><input type="radio" name="q-1197" value="D"><span>D</span> D.暂时不动，待时机成熟时再收回</label></div>
+        <div class="feedback" id="feedback-q-1197"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1197" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1197')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1197')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1198" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1198</span>
+                <p>【单选】新中国成立初期对台湾问题的策略方针是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1198')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1198" value="A"><span>A</span> A.积极备战，武力解决</label><label><input type="radio" name="q-1198" value="B"><span>B</span> B.暂时不动，待机收回</label><label><input type="radio" name="q-1198" value="C"><span>C</span> C.国共谈判，和平统一</label><label><input type="radio" name="q-1198" value="D"><span>D</span> D.创造条件，和平统一</label></div>
+        <div class="feedback" id="feedback-q-1198"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1198" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1198')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1198')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1199" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1199</span>
+                <p>【单选】新中国成立50年多年来，党和政府对台湾的方针政策大致经历的变化是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1199')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1199" value="A"><span>A</span> A.和平统一到解放台湾</label><label><input type="radio" name="q-1199" value="B"><span>B</span> B.由武力解放台湾到和平统一</label><label><input type="radio" name="q-1199" value="C"><span>C</span> C.由武力解放台湾到和平统一再到“一国两制”</label><label><input type="radio" name="q-1199" value="D"><span>D</span> D.由武力解放到“一国两制”</label></div>
+        <div class="feedback" id="feedback-q-1199"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1199" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1199')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1199')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1200" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1200</span>
+                <p>【单选】中国共产党首次提出“解放台湾”口号的时间是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1200')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1200" value="A"><span>A</span> A.1949年</label><label><input type="radio" name="q-1200" value="B"><span>B</span> B.1950年</label><label><input type="radio" name="q-1200" value="C"><span>C</span> C.1954年</label><label><input type="radio" name="q-1200" value="D"><span>D</span> D.1956年</label></div>
+        <div class="feedback" id="feedback-q-1200"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1200" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1200')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1200')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1201" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1201</span>
+                <p>【单选】1978年十一届三中全会以后，标志着我党对台方针政策重大转变的是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1201')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1201" value="A"><span>A</span> A.1979年元旦全国人大常委会发表的《告台湾同胞书》</label><label><input type="radio" name="q-1201" value="B"><span>B</span> B.1981年9月叶剑英对新华社记者发表被称为“叶九条”的台湾问题讲话</label><label><input type="radio" name="q-1201" value="C"><span>C</span> C.1982年1月邓小平谈话</label><label><input type="radio" name="q-1201" value="D"><span>D</span> D.1982年12月全国人大五届五次会议通过的《中华人民共和国宪法》</label></div>
+        <div class="feedback" id="feedback-q-1201"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1201" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1201')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1201')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1202" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1202</span>
+                <p>【单选】2004年2月，为了向世人宣示中央贯彻落实“一国两制”方针的坚强决心，更为了让大家全面准确地理解“一国两制”方针，把“一国两制”的伟大实践不断推向前进，国内重要媒体重新发表了邓小平的重要谈话是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1202')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1202" value="A"><span>A</span> A.《一个国家，两种制度》1984年6月)</label><label><input type="radio" name="q-1202" value="B"><span>B</span> B.《我们非常关注香港的过渡时期》1984年7月</label><label><input type="radio" name="q-1202" value="C"><span>C</span> C.《中国是信守诺言的》1984年12月)</label><label><input type="radio" name="q-1202" value="D"><span>D</span> D.《会见香港特别行政区基本法起草委员会委员时的讲话》1987年4月</label></div>
+        <div class="feedback" id="feedback-q-1202"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1202" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1202')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1202')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1203" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1203</span>
+                <p>【单选】“一国两制”构想的提出最早是针对()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1203')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1203" value="A"><span>A</span> A.香港问题</label><label><input type="radio" name="q-1203" value="B"><span>B</span> B.澳门问题</label><label><input type="radio" name="q-1203" value="C"><span>C</span> C.台湾问题</label><label><input type="radio" name="q-1203" value="D"><span>D</span> D.西藏问题</label></div>
+        <div class="feedback" id="feedback-q-1203"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1203" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1203')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1203')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1204" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1204</span>
+                <p>【单选】台湾问题从根本上讲是中国的()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1204')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1204" value="A"><span>A</span> A.外交问题</label><label><input type="radio" name="q-1204" value="B"><span>B</span> B.国际政治问题</label><label><input type="radio" name="q-1204" value="C"><span>C</span> C.内政问题</label><label><input type="radio" name="q-1204" value="D"><span>D</span> D.中美关系问题</label></div>
+        <div class="feedback" id="feedback-q-1204"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1204" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1204')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1204')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1205" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1205</span>
+                <p>【单选】中美关系的最大障碍是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1205')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1205" value="A"><span>A</span> A.人权问题</label><label><input type="radio" name="q-1205" value="B"><span>B</span> B.战略导弹防御体系问题</label><label><input type="radio" name="q-1205" value="C"><span>C</span> C.西藏问题</label><label><input type="radio" name="q-1205" value="D"><span>D</span> D.台湾问题</label></div>
+        <div class="feedback" id="feedback-q-1205"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1205" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1205')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1205')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1206" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1206</span>
+                <p>【单选】香港回归祖国的时间是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1206')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1206" value="A"><span>A</span> A.1978年7月1日</label><label><input type="radio" name="q-1206" value="B"><span>B</span> B.1987年10月1日</label><label><input type="radio" name="q-1206" value="C"><span>C</span> C.1997年7月1日</label><label><input type="radio" name="q-1206" value="D"><span>D</span> D.1997年10月1日</label></div>
+        <div class="feedback" id="feedback-q-1206"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1206" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1206')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1206')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1207" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1207</span>
+                <p>【单选】澳门回归祖国的时间是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1207')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1207" value="A"><span>A</span> A.1978年12月20日</label><label><input type="radio" name="q-1207" value="B"><span>B</span> B.1987年12月20日</label><label><input type="radio" name="q-1207" value="C"><span>C</span> C.1999年12月20日</label><label><input type="radio" name="q-1207" value="D"><span>D</span> D.2000年12月20日</label></div>
+        <div class="feedback" id="feedback-q-1207"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1207" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1207')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1207')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1208" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1208</span>
+                <p>【单选】“一国两制”构想的核心问题是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1208')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1208" value="A"><span>A</span> A.大陆实行社会主义不能动摇</label><label><input type="radio" name="q-1208" value="B"><span>B</span> B.港.澳.台保持资本主义制度不变</label><label><input type="radio" name="q-1208" value="C"><span>C</span> C.祖国统一</label><label><input type="radio" name="q-1208" value="D"><span>D</span> D.港.澳.台保持资本主义制度不变</label></div>
+        <div class="feedback" id="feedback-q-1208"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1208" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1208')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1208')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1209" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1209</span>
+                <p>【单选】解决台湾问题的前提是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1209')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1209" value="A"><span>A</span> A.坚持一个中国的原则</label><label><input type="radio" name="q-1209" value="B"><span>B</span> B.一国两制</label><label><input type="radio" name="q-1209" value="C"><span>C</span> C.和平统一</label><label><input type="radio" name="q-1209" value="D"><span>D</span> D.承认台湾事实上的“独立”地位</label></div>
+        <div class="feedback" id="feedback-q-1209"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1209" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1209')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1209')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1210" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1210</span>
+                <p>【单选】中国政府主张“一国两制”和平统一台湾，但决不承诺放弃使用武力，目的是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1210')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1210" value="A"><span>A</span> A.准备最后用武力“解放台湾”</label><label><input type="radio" name="q-1210" value="B"><span>B</span> B.以武力争取台湾统一</label><label><input type="radio" name="q-1210" value="C"><span>C</span> C.防止外国势力干涉中国统一和“台独”势力把台湾从祖国大陆分裂出去</label><label><input type="radio" name="q-1210" value="D"><span>D</span> D.对付台湾人民</label></div>
+        <div class="feedback" id="feedback-q-1210"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1210" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1210')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1210')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1211" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1211</span>
+                <p>【单选】澳门特别行政区享有的自治权有()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1211')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1211" value="A"><span>A</span> A.行政管理权.立法权.独立的司法权</label><label><input type="radio" name="q-1211" value="B"><span>B</span> B.立法权.司法权</label><label><input type="radio" name="q-1211" value="C"><span>C</span> C.行政管理权.立法权.独立的司法权和终审权</label><label><input type="radio" name="q-1211" value="D"><span>D</span> D.行政管理权.司法权</label></div>
+        <div class="feedback" id="feedback-q-1211"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1211" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1211')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1211')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1212" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1212</span>
+                <p>【单选】20世纪50年代中期，代表中国政府第一次公开提出“和平解放台湾”主张的是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1212')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1212" value="A"><span>A</span> A.毛泽东</label><label><input type="radio" name="q-1212" value="B"><span>B</span> B.邓小平</label><label><input type="radio" name="q-1212" value="C"><span>C</span> C.周恩来</label><label><input type="radio" name="q-1212" value="D"><span>D</span> D.叶剑英</label></div>
+        <div class="feedback" id="feedback-q-1212"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1212" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1212')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1212')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1213" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1213</span>
+                <p>【单选】“一国两制”的基础和前提是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1213')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1213" value="A"><span>A</span> A.坚持一个中国的原则</label><label><input type="radio" name="q-1213" value="B"><span>B</span> B.港.澳.台地区实行高度自治</label><label><input type="radio" name="q-1213" value="C"><span>C</span> C.港.澳.台地区保持繁荣稳定</label><label><input type="radio" name="q-1213" value="D"><span>D</span> D.港.澳.台地区保持原有的资本主义制度50年不变</label></div>
+        <div class="feedback" id="feedback-q-1213"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1213" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1213')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1213')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1214" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1214</span>
+                <p>【单选】1995年1月30日，江泽民发表的关于现阶段发展两岸关系.推动祖国和平统一进程的重要讲话是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1214')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1214" value="A"><span>A</span> A.《中国大陆和台湾和平统一的设想》</label><label><input type="radio" name="q-1214" value="B"><span>B</span> B.《为促进祖国统一大业的完成而继续奋斗》</label><label><input type="radio" name="q-1214" value="C"><span>C</span> C.《完成祖国统一大业是全体中国人民的共同愿望》</label><label><input type="radio" name="q-1214" value="D"><span>D</span> D.《告台湾同胞书》</label></div>
+        <div class="feedback" id="feedback-q-1214"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1214" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1214')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1214')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1215" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1215</span>
+                <p>【单选】首次正式以“台湾回到祖国怀抱，实现统一大业”来代替“解放台湾”提法的文献是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1215')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1215" value="A"><span>A</span> A.《告台湾同胞书》</label><label><input type="radio" name="q-1215" value="B"><span>B</span> B.《中国大陆和台湾和平统一的设想》</label><label><input type="radio" name="q-1215" value="C"><span>C</span> C.《汪辜会谈共同协议》</label><label><input type="radio" name="q-1215" value="D"><span>D</span> D.中共十一届三中全会公报</label></div>
+        <div class="feedback" id="feedback-q-1215"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1215" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1215')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1215')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1216" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1216</span>
+                <p>【单选】最早提出两岸尽快实现通邮.通航.通商“三通”建议的文献是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1216')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1216" value="A"><span>A</span> A.《中国大陆和台湾和平统一的设想》</label><label><input type="radio" name="q-1216" value="B"><span>B</span> B.《为促进祖国统一大业的完成而继续奋斗》</label><label><input type="radio" name="q-1216" value="C"><span>C</span> C.《完成祖国统一大业是全体中国人民的共同愿望》</label><label><input type="radio" name="q-1216" value="D"><span>D</span> D.《告台湾同胞书》</label></div>
+        <div class="feedback" id="feedback-q-1216"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1216" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1216')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1216')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1217" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1217</span>
+                <p>【单选】台湾同胞是我们实现祖国和平统一所依靠的基本力量。最终解决台湾问题，实现祖国完全统一，一定要得到台湾大多数人民的理解与支持。与此相关，我们解决台湾问题的一项重要方针和基础性工作是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1217')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1217" value="A"><span>A</span> A.寄希望于两岸谈判</label><label><input type="radio" name="q-1217" value="B"><span>B</span> B.寄希望于台湾当局</label><label><input type="radio" name="q-1217" value="C"><span>C</span> C.寄希望于台湾当局和台湾人民</label><label><input type="radio" name="q-1217" value="D"><span>D</span> D.寄希望于台湾人民</label></div>
+        <div class="feedback" id="feedback-q-1217"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1217" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1217')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1217')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1218" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1218</span>
+                <p>【单选】坚持一个中国原则的核心是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1218')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1218" value="A"><span>A</span> A.反对台湾独立</label><label><input type="radio" name="q-1218" value="B"><span>B</span> B.反对台湾势力分裂祖国</label><label><input type="radio" name="q-1218" value="C"><span>C</span> C.贯彻“一国两制”构想</label><label><input type="radio" name="q-1218" value="D"><span>D</span> D.中国的主权和领土完整不容分割</label></div>
+        <div class="feedback" id="feedback-q-1218"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1218" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1218')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1218')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1219" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1219</span>
+                <p>【单选】全国人大制定《反分裂国家法》的时间是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1219')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1219" value="A"><span>A</span> A.2000年3月</label><label><input type="radio" name="q-1219" value="B"><span>B</span> B.2001年3月</label><label><input type="radio" name="q-1219" value="C"><span>C</span> C.2005年3月</label><label><input type="radio" name="q-1219" value="D"><span>D</span> D.2007年3月</label></div>
+        <div class="feedback" id="feedback-q-1219"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1219" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1219')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1219')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1220" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1220</span>
+                <p>【单选】我国对台工作的首要任务是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1220')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1220" value="A"><span>A</span> A.促进两岸交流</label><label><input type="radio" name="q-1220" value="B"><span>B</span> B.反对和遏制台独</label><label><input type="radio" name="q-1220" value="C"><span>C</span> C.发展两岸经贸合作</label><label><input type="radio" name="q-1220" value="D"><span>D</span> D.推进两岸“三通</label></div>
+        <div class="feedback" id="feedback-q-1220"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1220" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1220')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1220')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1221" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1221</span>
+                <p>【单选】两岸关系的主题是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1221')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1221" value="A"><span>A</span> A.祖国统一</label><label><input type="radio" name="q-1221" value="B"><span>B</span> B.和平稳定</label><label><input type="radio" name="q-1221" value="C"><span>C</span> C.和平发展</label><label><input type="radio" name="q-1221" value="D"><span>D</span> D.经贸合作</label></div>
+        <div class="feedback" id="feedback-q-1221"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1221" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1221')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1221')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1222" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1222</span>
+                <p>【单选】《中葡联合声明》在北京签署的时间是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1222')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1222" value="A"><span>A</span> A.1985年</label><label><input type="radio" name="q-1222" value="B"><span>B</span> B.1986年</label><label><input type="radio" name="q-1222" value="C"><span>C</span> C.1987年</label><label><input type="radio" name="q-1222" value="D"><span>D</span> D.1988年</label></div>
+        <div class="feedback" id="feedback-q-1222"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1222" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1222')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1222')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1223" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1223</span>
+                <p>【单选】我国实行“一国两制”不会改变人民民主专政国家的社会主义性质，这是因为()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1223')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1223" value="A"><span>A</span> A.特别行政区只是中华人民共和国的一个行政区域</label><label><input type="radio" name="q-1223" value="B"><span>B</span> B.特别行政区政府是在中华人民共和国中央人民政府的统一领导下</label><label><input type="radio" name="q-1223" value="C"><span>C</span> C.特别行政区享有内地一般地方行政区域所没有的高度自治权</label><label><input type="radio" name="q-1223" value="D"><span>D</span> D.两种制度地位不同，社会主义制度是主体</label></div>
+        <div class="feedback" id="feedback-q-1223"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1223" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1223')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1223')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1224" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1224</span>
+                <p>【单选】台湾与大陆和平统一后，台湾特别行政区可以享有比香港.澳门特别行政区更高度的自治权利，主要体制在()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1224')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1224" value="A"><span>A</span> A.可以保留自己的军队</label><label><input type="radio" name="q-1224" value="B"><span>B</span> B.拥有立法权</label><label><input type="radio" name="q-1224" value="C"><span>C</span> C.拥有终审权</label><label><input type="radio" name="q-1224" value="D"><span>D</span> D.拥有独立司法权</label></div>
+        <div class="feedback" id="feedback-q-1224"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1224" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1224')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1224')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1225" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1225</span>
+                <p>【单选】中英两国政府首脑在北京正式签署关于香港问题的《联合声明》及附件是在()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1225')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1225" value="A"><span>A</span> A.1984年</label><label><input type="radio" name="q-1225" value="B"><span>B</span> B.1987年</label><label><input type="radio" name="q-1225" value="C"><span>C</span> C.1990年</label><label><input type="radio" name="q-1225" value="D"><span>D</span> D.1993年</label></div>
+        <div class="feedback" id="feedback-q-1225"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1225" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1225')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1225')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1226" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1226</span>
+                <p>【单选】为完成香港的繁荣稳定，香港回归祖国以后，有若干个“不变”，这些将“50年不变”是指()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1226')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1226" value="A"><span>A</span> A.香港的资本主义制度只保留50年</label><label><input type="radio" name="q-1226" value="B"><span>B</span> B.香港的制度早晚要变</label><label><input type="radio" name="q-1226" value="C"><span>C</span> C.50年不变只是一个形象说法，50年后也不会变</label><label><input type="radio" name="q-1226" value="D"><span>D</span> D.50年不变是权宜之计，回归后是否变，要看形势的发展</label></div>
+        <div class="feedback" id="feedback-q-1226"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1226" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1226')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1226')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1227" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1227</span>
+                <p>【单选】<中华人民共和国香港特别行政区基本法〉诞生的事件时（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1227')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1227" value="A"><span>A</span> A.1984年</label><label><input type="radio" name="q-1227" value="B"><span>B</span> B.1985年</label><label><input type="radio" name="q-1227" value="C"><span>C</span> C.1990年</label><label><input type="radio" name="q-1227" value="D"><span>D</span> D.1991年</label></div>
+        <div class="feedback" id="feedback-q-1227"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1227" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1227')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1227')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1228" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1228</span>
+                <p>【单选】1963年，周恩来把我们党关于和平解决台湾问题的政策和思想，归纳为“一纲四目”，“一纲”就是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1228')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1228" value="A"><span>A</span> A.台湾之军政大权.人事安排等悉委于蒋介石</label><label><input type="radio" name="q-1228" value="B"><span>B</span> B.台湾必须统一于中国</label><label><input type="radio" name="q-1228" value="C"><span>C</span> C.台湾所有军政及经济建设一切费用不足之数，悉由中央政府拨付</label><label><input type="radio" name="q-1228" value="D"><span>D</span> D.台湾的社会改革可以从缓</label></div>
+        <div class="feedback" id="feedback-q-1228"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1228" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1228')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1228')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1229" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1229</span>
+                <p>【单选】台湾问题实质是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1229')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1229" value="A"><span>A</span> A.中国的内政问题</label><label><input type="radio" name="q-1229" value="B"><span>B</span> B.中国同美国的问题</label><label><input type="radio" name="q-1229" value="C"><span>C</span> C.中国同英国的关系问题</label><label><input type="radio" name="q-1229" value="D"><span>D</span> D.中国同日本的关系问题</label></div>
+        <div class="feedback" id="feedback-q-1229"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1229" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1229')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1229')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1230" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1230</span>
+                <p>【单选】从“一国两制”构想延伸开去，邓小平进一步提出了解决某些国际领土争端的新思路，即()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1230')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1230" value="A"><span>A</span> A.分而治之</label><label><input type="radio" name="q-1230" value="B"><span>B</span> B.共同治理</label><label><input type="radio" name="q-1230" value="C"><span>C</span> C.和平共处</label><label><input type="radio" name="q-1230" value="D"><span>D</span> D.共同开发</label></div>
+        <div class="feedback" id="feedback-q-1230"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1230" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1230')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1230')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1231" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1231</span>
+                <p>【单选】我国独立自主的和平外交政策，应坚持把()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1231')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1231" value="A"><span>A</span> A.发展对外经济关系放在首位</label><label><input type="radio" name="q-1231" value="B"><span>B</span> B.发展睦邻友好关系放在首位</label><label><input type="radio" name="q-1231" value="C"><span>C</span> C.维护国家主权和国家利益放在首位</label><label><input type="radio" name="q-1231" value="D"><span>D</span> D.反对霸权主义.强权政治放在首位</label></div>
+        <div class="feedback" id="feedback-q-1231"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1231" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1231')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1231')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1232" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1232</span>
+                <p>【单选】我国党和政府解决台湾问题的基本方针（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1232')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1232" value="A"><span>A</span> A.中国政府承诺不以武力解决</label><label><input type="radio" name="q-1232" value="B"><span>B</span> B.和平统一，一国两制</label><label><input type="radio" name="q-1232" value="C"><span>C</span> C.台湾享有完全的自治权</label><label><input type="radio" name="q-1232" value="D"><span>D</span> D.与美国等有关国家共同协商解决</label></div>
+        <div class="feedback" id="feedback-q-1232"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1232" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1232')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1232')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1233" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1233</span>
+                <p>【单选】按照“一国两制”构想完成祖国统一大业，不会改变我国社会制度的性质，其原因是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1233')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1233" value="A"><span>A</span> A.保持原有资本主义制度不变特别行政区是中华人民共和国不可分割的一部分</label><label><input type="radio" name="q-1233" value="B"><span>B</span> B.两种制度的地位不同，中国的主体坚持社会主义制度</label><label><input type="radio" name="q-1233" value="C"><span>C</span> C.特别行政区要接受中国人民政府的领导</label><label><input type="radio" name="q-1233" value="D"><span>D</span> D.特别行政区除了高度自治外与大陆各行政区没什么区别</label></div>
+        <div class="feedback" id="feedback-q-1233"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1233" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1233')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1233')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1234" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1234</span>
+                <p>【单选】我国实行“一国两制”后，我国的国家结构是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1234')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1234" value="A"><span>A</span> A.联邦制</label><label><input type="radio" name="q-1234" value="B"><span>B</span> B.邦联制</label><label><input type="radio" name="q-1234" value="C"><span>C</span> C.单一制</label><label><input type="radio" name="q-1234" value="D"><span>D</span> D.单一制和联邦制混合制</label></div>
+        <div class="feedback" id="feedback-q-1234"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1234" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1234')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1234')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1235" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1235</span>
+                <p>【单选】香港.澳门.台湾成立特别行政区后，享有高度的自治权，其中可以保留军队的特别行政区是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1235')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1235" value="A"><span>A</span> A.香港</label><label><input type="radio" name="q-1235" value="B"><span>B</span> B.澳门</label><label><input type="radio" name="q-1235" value="C"><span>C</span> C.台湾</label><label><input type="radio" name="q-1235" value="D"><span>D</span> D.香港和澳门</label></div>
+        <div class="feedback" id="feedback-q-1235"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1235" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1235')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1235')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1236" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1236</span>
+                <p>【单选】李登辉提出“两国论”的要害是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1236')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1236" value="A"><span>A</span> A.一边一国</label><label><input type="radio" name="q-1236" value="B"><span>B</span> B.破坏“一个中国”的原则</label><label><input type="radio" name="q-1236" value="C"><span>C</span> C.破坏两岸“三通”</label><label><input type="radio" name="q-1236" value="D"><span>D</span> D.“文化台独”</label></div>
+        <div class="feedback" id="feedback-q-1236"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1236" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1236')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1236')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1237" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1237</span>
+                <p>【多选】周恩来的归纳总结，为了达到“台湾必须统一于中国”的目标，和平解决台湾问题的政策主张有()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1237')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1237" value="A"><span>A</span> A.台湾回归祖国后，除外交必须统一于中央外，所有军政大权.人事安排等悉委于蒋(介石)，陈诚.蒋经国亦悉由蒋意重用</label><label><input type="checkbox" name="q-1237" value="B"><span>B</span> B.所有军政及建设经费不足之数悉由中央拨付(当时台湾每年赤字约8亿美元)</label><label><input type="checkbox" name="q-1237" value="C"><span>C</span> C.台湾的社会改革可以从缓，必俟条件成熟并征得蒋之同意后进行</label><label><input type="checkbox" name="q-1237" value="D"><span>D</span> D.互约不派特务，不做破坏对方团结之举</label></div>
+        <div class="feedback" id="feedback-q-1237"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1237" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1237')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1237')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1238" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1238</span>
+                <p>【多选】“一国两制”构想()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1238')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1238" value="A"><span>A</span> A.是邓小平理论的重要组成部分，为解决国际争端提供了一个范例</label><label><input type="checkbox" name="q-1238" value="B"><span>B</span> B.基本内容是一个国家.两种制度</label><label><input type="checkbox" name="q-1238" value="C"><span>C</span> C.是实现祖国和平统一的基本方针</label><label><input type="checkbox" name="q-1238" value="D"><span>D</span> D.体现了原则性和灵活性的统一</label></div>
+        <div class="feedback" id="feedback-q-1238"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1238" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1238')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1238')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1239" data-answer="ABC">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1239</span>
+                <p>【多选】祖国统一是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1239')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1239" value="A"><span>A</span> A.中华民族的情感.意志和夙愿的集中体现</label><label><input type="checkbox" name="q-1239" value="B"><span>B</span> B.中华民族伟大凝聚力的</label><label><input type="checkbox" name="q-1239" value="C"><span>C</span> C.集中体现中华民族的根本利益所在</label><label><input type="checkbox" name="q-1239" value="D"><span>D</span> D.中国封建大一统思想的全面继承</label></div>
+        <div class="feedback" id="feedback-q-1239"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1239" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1239')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1239')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1240" data-answer="ACD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1240</span>
+                <p>【多选】我国政府以“一国两制”解决香港.澳门.台湾问题的方针政策主要有()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1240')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1240" value="A"><span>A</span> A.坚持“一个中国”</label><label><input type="checkbox" name="q-1240" value="B"><span>B</span> B.实现祖国统一后，香港.澳门和台湾可设立特别行政区，实行完全自治</label><label><input type="checkbox" name="q-1240" value="C"><span>C</span> C.国家主体坚持社会主义制度，港.澳.台保持资本主义制度长期不变</label><label><input type="checkbox" name="q-1240" value="D"><span>D</span> D.力争用和平方式实现祖国统一，但不承诺放弃使用武力</label></div>
+        <div class="feedback" id="feedback-q-1240"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1240" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1240')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1240')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1241" data-answer="ACD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1241</span>
+                <p>【多选】我国党与政府在台湾问题上的基本立场是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1241')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1241" value="A"><span>A</span> A.坚持“和平统一.一国两制”的基本方针和发展两岸关系.推进和平统一进程的八项主张</label><label><input type="checkbox" name="q-1241" value="B"><span>B</span> B.台湾问题和香港.澳门问题一样，都是殖民主义侵略遗留下来的问题</label><label><input type="checkbox" name="q-1241" value="C"><span>C</span> C.主张用和平方式实现统一，但决不承诺放弃使用武力</label><label><input type="checkbox" name="q-1241" value="D"><span>D</span> D.坚持一个中国的原则，反对以任何方式改变台湾是中国一部分的地位</label></div>
+        <div class="feedback" id="feedback-q-1241"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1241" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1241')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1241')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1242" data-answer="ACD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1242</span>
+                <p>【多选】按照我国宪法规定，特别行政区是中华人民共和国不可分割的一部分。这个论断表明()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1242')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1242" value="A"><span>A</span> A.“一国两制”的前提是坚持一个中国的原则</label><label><input type="checkbox" name="q-1242" value="B"><span>B</span> B.特别行政区必须坚持四项基本原则</label><label><input type="checkbox" name="q-1242" value="C"><span>C</span> C.特别行政区政府是国家的一级地方政权机关</label><label><input type="checkbox" name="q-1242" value="D"><span>D</span> D.特别行政区直辖于中央人民政府</label></div>
+        <div class="feedback" id="feedback-q-1242"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1242" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1242')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1242')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1243" data-answer="BD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1243</span>
+                <p>【多选】我国政府恢复对澳门行使主权后，对澳门实行“一国两制”.澳人治澳.高度自治的方针。澳门特别行政区在政治和法律方面享有的自治权包括()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1243')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1243" value="A"><span>A</span> A.外交权</label><label><input type="checkbox" name="q-1243" value="B"><span>B</span> B.行政管理权和立法权</label><label><input type="checkbox" name="q-1243" value="C"><span>C</span> C.防务权</label><label><input type="checkbox" name="q-1243" value="D"><span>D</span> D.独立的司法权和终审权</label></div>
+        <div class="feedback" id="feedback-q-1243"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1243" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1243')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1243')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1244" data-answer="ABD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1244</span>
+                <p>【多选】根据《中华人民共和国宪法》的规定，1997年7月1日中国恢复对香港行使主权以后，在香港设立了特别行政区。香港特别行政区由香港当地人自己管理，享有高度自治权，包括()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1244')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1244" value="A"><span>A</span> A.立法权</label><label><input type="checkbox" name="q-1244" value="B"><span>B</span> B.独立的司法权和终审权</label><label><input type="checkbox" name="q-1244" value="C"><span>C</span> C.独立的外交权</label><label><input type="checkbox" name="q-1244" value="D"><span>D</span> D.行政管理权和财政独立</label></div>
+        <div class="feedback" id="feedback-q-1244"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1244" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1244')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1244')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1245" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1245</span>
+                <p>【多选】中国政府提出，我们力争用和平方式实现祖国统一，但决不承诺放弃使用武力，是因为()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1245')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1245" value="A"><span>A</span> A.在台湾与祖国大陆统一的问题上始终存在着和平方式与非和平方式两种可能性</label><label><input type="checkbox" name="q-1245" value="B"><span>B</span> B.能否以和平方式统一祖国，并不完全取决于我们一方</label><label><input type="checkbox" name="q-1245" value="C"><span>C</span> C.不承诺放弃使用武力，决不是针对台湾人民的</label><label><input type="checkbox" name="q-1245" value="D"><span>D</span> D.不承诺放弃使用武力，主要是针对外国势力干涉中国统一和“台独”势力搞“台湾独立”的阴谋</label></div>
+        <div class="feedback" id="feedback-q-1245"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1245" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1245')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1245')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1246" data-answer="ABD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1246</span>
+                <p>【多选】江泽民同志1995年春节期间关于台湾问题的重要讲话()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1246')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1246" value="A"><span>A</span> A.是党和政府按“一国两制”解决台湾问题的纲领性文件</label><label><input type="checkbox" name="q-1246" value="B"><span>B</span> B.进一步阐述了“一国两制”的祖国统一构想</label><label><input type="checkbox" name="q-1246" value="C"><span>C</span> C.提出了和平统一祖国的又一个新构想</label><label><input type="checkbox" name="q-1246" value="D"><span>D</span> D.核心是坚持一个中国的原则</label></div>
+        <div class="feedback" id="feedback-q-1246"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1246" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1246')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1246')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1247" data-answer="BCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1247</span>
+                <p>【多选】台湾问题是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1247')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1247" value="A"><span>A</span> A.二战遗留下来的问题</label><label><input type="checkbox" name="q-1247" value="B"><span>B</span> B.中美关系中的最大障碍</label><label><input type="checkbox" name="q-1247" value="C"><span>C</span> C.中国国内战争遗留下来的问题</label><label><input type="checkbox" name="q-1247" value="D"><span>D</span> D.中国的内政问题</label></div>
+        <div class="feedback" id="feedback-q-1247"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1247" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1247')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1247')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1248" data-answer="ABC">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1248</span>
+                <p>【多选】2000年2月21日，中国政府发表《一个中国的原则与台湾问题》的白皮书。白皮书中提到，中国政府只能被迫采取断然措施包括使用武力来解决统一的情况或底线是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1248')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1248" value="A"><span>A</span> A.如果出现台湾被以任何名义从中国分割出去的重大事变</label><label><input type="checkbox" name="q-1248" value="B"><span>B</span> B.如果出现外国侵占台湾</label><label><input type="checkbox" name="q-1248" value="C"><span>C</span> C.如果台湾当局无限期地拒绝通过和平谈判解决两岸统一问题</label><label><input type="checkbox" name="q-1248" value="D"><span>D</span> D.如果民进党上台</label></div>
+        <div class="feedback" id="feedback-q-1248"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1248" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1248')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1248')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1249" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1249</span>
+                <p>【多选】“一国两制”构想及其实践的重大历史意义有()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1249')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1249" value="A"><span>A</span> A.丰富和发展了马克思主义的国家学说</label><label><input type="checkbox" name="q-1249" value="B"><span>B</span> B.丰富了马克思主义原则的坚定性与策略的灵活性相统一的原理</label><label><input type="checkbox" name="q-1249" value="C"><span>C</span> C.创造性地把和平共处五项原则用来处理一个国家的内部问题</label><label><input type="checkbox" name="q-1249" value="D"><span>D</span> D.为解决国际争端和世界遗留问题提供了新的思路.新的途径和模式</label></div>
+        <div class="feedback" id="feedback-q-1249"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1249" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1249')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1249')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1250" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1250</span>
+                <p>【多选】贯彻寄希望于台湾人民的方针，就要大力推动两岸的交流与合作，主要指“三通四流”，即()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1250')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1250" value="A"><span>A</span> A.直接通商</label><label><input type="checkbox" name="q-1250" value="B"><span>B</span> B.直接通航</label><label><input type="checkbox" name="q-1250" value="C"><span>C</span> C.直接通邮</label><label><input type="checkbox" name="q-1250" value="D"><span>D</span> D.两岸经济文化交流和人员往来</label></div>
+        <div class="feedback" id="feedback-q-1250"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1250" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1250')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1250')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1251" data-answer="ABC">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1251</span>
+                <p>【多选】为积极推动“和平统一.一国两制”的历史进程，我国外交工作的重点之一是为实现祖国完全统一服务，工作侧重点是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1251')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1251" value="A"><span>A</span> A.坚决反对台湾当局在国际上进行的任何分裂活动</label><label><input type="checkbox" name="q-1251" value="B"><span>B</span> B.维护国际社会承认一个中国的基本格局</label><label><input type="checkbox" name="q-1251" value="C"><span>C</span> C.巩固制约“台独”的外部环境</label><label><input type="checkbox" name="q-1251" value="D"><span>D</span> D.打压“台独”的国际活动空间</label></div>
+        <div class="feedback" id="feedback-q-1251"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1251" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1251')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1251')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1252" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1252</span>
+                <p>【多选】陈水扁2000年5月上台以后，顽固坚持“台湾是主权独立国家”的分裂活动，具体表现有()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1252')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1252" value="A"><span>A</span> A.拒不承认一个中国原则，不承认“九二共识”</label><label><input type="checkbox" name="q-1252" value="B"><span>B</span> B.阻挠在一个中国原则基础上恢复两岸谈判</label><label><input type="checkbox" name="q-1252" value="C"><span>C</span> C.百般限制两岸经济交流，拖延两岸直接“三通”</label><label><input type="checkbox" name="q-1252" value="D"><span>D</span> D.继续推行“务实外交”，谋求挤进只有主权国家才能参加的国际组织</label></div>
+        <div class="feedback" id="feedback-q-1252"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1252" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1252')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1252')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1253" data-answer="ABC">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1253</span>
+                <p>【多选】中国政府主张在一个中国的原则上，恢复和进行两岸对话与谈判，这是不能动摇的。十六大报告指出，在一个中国的前提下，什么都可以谈，主要包括()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1253')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1253" value="A"><span>A</span> A.可以谈正式结束两岸敌对状态</label><label><input type="checkbox" name="q-1253" value="B"><span>B</span> B.可以谈与台湾地区身份相适应的国际活动空间</label><label><input type="checkbox" name="q-1253" value="C"><span>C</span> C.可以谈台湾当局的政治地位</label><label><input type="checkbox" name="q-1253" value="D"><span>D</span> D.可以谈一个中国的具体国名</label></div>
+        <div class="feedback" id="feedback-q-1253"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1253" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1253')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1253')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1254" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1254</span>
+                <p>【多选】在两岸统一上寄希望于台湾人民是指()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1254')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1254" value="A"><span>A</span> A.把台湾当局的分裂言行与台湾人民区别开来</label><label><input type="checkbox" name="q-1254" value="B"><span>B</span> B.把主张维持现状的绝大多数人与主张分裂的少数人区别开来</label><label><input type="checkbox" name="q-1254" value="C"><span>C</span> C.把广大民进党党员与少数顽固的“台独”分子区别开来</label><label><input type="checkbox" name="q-1254" value="D"><span>D</span> D.把过去坚持过“台独”现已改变立场与仍然坚持“台独”立场的人区别开来</label></div>
+        <div class="feedback" id="feedback-q-1254"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1254" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1254')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1254')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1255" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1255</span>
+                <p>【多选】党的十七大关于今后一个时期对台工作的指导思想和总体要求是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1255')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1255" value="A"><span>A</span> A.遵循“和平统一.一国两制”的方针和现阶段发展两岸关系.推进祖国和平统一进程的八项主张</label><label><input type="checkbox" name="q-1255" value="B"><span>B</span> B.坚持一个中国原则决不动摇，争取和平统一的努力决不放弃，寄希望于台湾人民的方针决不改变，反对“台独”分裂活动决不妥协</label><label><input type="checkbox" name="q-1255" value="C"><span>C</span> C.牢牢把握两岸关系和平发展的主题，真诚为两岸同胞谋福祉.为台湾地区谋和平</label><label><input type="checkbox" name="q-1255" value="D"><span>D</span> D.维护国家主权和领土完整，维护中华民族根本利益</label></div>
+        <div class="feedback" id="feedback-q-1255"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1255" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1255')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1255')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1256" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1256</span>
+                <p>【多选】2004年十六届四中全会曾经提出，“保持香港.澳门长期繁荣稳定是党在新形势下治国理政面临的崭新课题”。党的十七大在总结经验的基础上提出今后在香港.澳门继续推进“一国两制”实践应该坚持的基本原则有()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1256')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1256" value="A"><span>A</span> A.坚定不移地贯彻“一国两制”.“港人治港”.“澳人治澳”.高度自治的方针，严格按照特别行政区基本法办事</label><label><input type="checkbox" name="q-1256" value="B"><span>B</span> B.全力支持特别行政区政府依法施政，着力发展经济.改善民生，推进民主；把香港.澳门管理好.建设好，两个特别行政区政府是关键</label><label><input type="checkbox" name="q-1256" value="C"><span>C</span> C.鼓励香港.澳门各界人士在爱国爱港.爱国爱澳旗帜下和衷共济，促进社会和谐；加强内地与香港.澳门交流合作，实现优势互补.共同发展</label><label><input type="checkbox" name="q-1256" value="D"><span>D</span> D.积极支持香港.澳门开展对外交往，坚决反对外部势力干预香港.澳门事务</label></div>
+        <div class="feedback" id="feedback-q-1256"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1256" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1256')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1256')">确认</button>
+    </div>
+    
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => { updateAllFavoriteIcons(); loadAllNotes(); });</script>
+</body>
+</html>

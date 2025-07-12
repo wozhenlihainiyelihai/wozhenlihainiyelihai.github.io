@@ -1,0 +1,1748 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习 15</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        (function() {
+            try {
+                const theme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (theme === 'dark' || (!theme && prefersDark)) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+</head>
+<body>
+    <div id="toast-container"></div>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="home-button" title="返回主页">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </a>
+            <h1 class="page-title">练习 15</h1>
+            <div class="theme-switcher" id="theme-switcher" title="切换主题">
+                <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </div>
+        </div>
+        
+    <div class="question-block" id="q-1387" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1387</span>
+                <p>【单选】中国共产党是中国革命和建设事业的领导核心，党的这种领导地位首先是由()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1387')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1387" value="A"><span>A</span> A.党的工人阶级先锋队的性质决定的</label><label><input type="radio" name="q-1387" value="B"><span>B</span> B.党的为人民服务的宗旨决定的</label><label><input type="radio" name="q-1387" value="C"><span>C</span> C.党的基本路线和基本方针决定的</label><label><input type="radio" name="q-1387" value="D"><span>D</span> D.党的纲领和党的章程决定的</label></div>
+        <div class="feedback" id="feedback-q-1387"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1387" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1387')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1387')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1388" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1388</span>
+                <p>【单选】无产阶级政党的组织原则是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1388')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1388" value="A"><span>A</span> A.集体领导</label><label><input type="radio" name="q-1388" value="B"><span>B</span> B.理论联系实际</label><label><input type="radio" name="q-1388" value="C"><span>C</span> C.实事求是</label><label><input type="radio" name="q-1388" value="D"><span>D</span> D.民主集中制</label></div>
+        <div class="feedback" id="feedback-q-1388"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1388" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1388')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1388')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1389" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1389</span>
+                <p>【单选】中国共产党一切工作的出发点和落脚点是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1389')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1389" value="A"><span>A</span> A.解放生产力.发展生产力</label><label><input type="radio" name="q-1389" value="B"><span>B</span> B.实现共产主义</label><label><input type="radio" name="q-1389" value="C"><span>C</span> C.代表最广大人民的根本利益</label><label><input type="radio" name="q-1389" value="D"><span>D</span> D.代表先进生产力的发展要求</label></div>
+        <div class="feedback" id="feedback-q-1389"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1389" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1389')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1389')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1390" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1390</span>
+                <p>【单选】总结中国共产党的历史，得出的最基本的经验是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1390')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1390" value="A"><span>A</span> A.必须始终坚持马克思主义的基本原理同中国的具体实际相结合</label><label><input type="radio" name="q-1390" value="B"><span>B</span> B.必须始终紧紧依靠群众</label><label><input type="radio" name="q-1390" value="C"><span>C</span> C.必须始终自觉地加强和改进党的建设</label><label><input type="radio" name="q-1390" value="D"><span>D</span> D.必须始终坚持解放生产力.发展生产力</label></div>
+        <div class="feedback" id="feedback-q-1390"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1390" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1390')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1390')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1391" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1391</span>
+                <p>【单选】中国共产党的阶级基础是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1391')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1391" value="A"><span>A</span> A.农民阶级</label><label><input type="radio" name="q-1391" value="B"><span>B</span> B.工人阶级</label><label><input type="radio" name="q-1391" value="C"><span>C</span> C.知识分子</label><label><input type="radio" name="q-1391" value="D"><span>D</span> D.民主人士</label></div>
+        <div class="feedback" id="feedback-q-1391"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1391" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1391')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1391')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1392" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1392</span>
+                <p>【单选】我们党真正成为工人阶级先锋队组织的必然要求是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1392')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1392" value="A"><span>A</span> A.坚持改革开放</label><label><input type="radio" name="q-1392" value="B"><span>B</span> B.自觉成为中国人民和中华民族的先锋队</label><label><input type="radio" name="q-1392" value="C"><span>C</span> C.坚持四项基本原则</label><label><input type="radio" name="q-1392" value="D"><span>D</span> D.自觉成为经济建设队伍的先锋队</label></div>
+        <div class="feedback" id="feedback-q-1392"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1392" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1392')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1392')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1393" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1393</span>
+                <p>【单选】中国共产党是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1393')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1393" value="A"><span>A</span> A.工农联盟的政党</label><label><input type="radio" name="q-1393" value="B"><span>B</span> B.全国各族人民的政党</label><label><input type="radio" name="q-1393" value="C"><span>C</span> C.工人阶级先锋队的政党</label><label><input type="radio" name="q-1393" value="D"><span>D</span> D.先进分子的政党</label></div>
+        <div class="feedback" id="feedback-q-1393"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1393" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1393')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1393')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1394" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1394</span>
+                <p>【单选】中国共产党的唯一宗旨是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1394')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1394" value="A"><span>A</span> A.解放全人类</label><label><input type="radio" name="q-1394" value="B"><span>B</span> B.全心全意为人民服务</label><label><input type="radio" name="q-1394" value="C"><span>C</span> C.实现共产主义</label><label><input type="radio" name="q-1394" value="D"><span>D</span> D.领导和团结全国各族人民</label></div>
+        <div class="feedback" id="feedback-q-1394"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1394" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1394')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1394')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1395" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1395</span>
+                <p>【单选】中国共产党和各民主党派的关系与美国民主党和共和党之间的关系是根本不同的。其不同点在于()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1395')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1395" value="A"><span>A</span> A.前者代表无产阶级和劳动人民的利益，后者代表剥削阶级的利益</label><label><input type="radio" name="q-1395" value="B"><span>B</span> B.前者有共同合作的政治基础，后者没有合作的政治基础</label><label><input type="radio" name="q-1395" value="C"><span>C</span> C.前者是互相监督的关系，后者是长期对立的关系</label><label><input type="radio" name="q-1395" value="D"><span>D</span> D.前者是执政党和参政党的关系，后者是轮流执政的关系</label></div>
+        <div class="feedback" id="feedback-q-1395"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1395" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1395')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1395')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1396" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1396</span>
+                <p>【单选】中国共产党对国家的政治领导是通过()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1396')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1396" value="A"><span>A</span> A.共产党员的先锋模范作用来实现的</label><label><input type="radio" name="q-1396" value="B"><span>B</span> B.法定程序使自己的路线和政策成为国家意志来实现的</label><label><input type="radio" name="q-1396" value="C"><span>C</span> C.强有力的思想政治工作和宣传教育工作来实现的</label><label><input type="radio" name="q-1396" value="D"><span>D</span> D.党的全国代表大会向全国人民代表大会提出建议来实现的</label></div>
+        <div class="feedback" id="feedback-q-1396"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1396" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1396')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1396')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1397" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1397</span>
+                <p>【单选】判断政党的阶级性()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1397')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1397" value="A"><span>A</span> A.主要看它在实践中所体现的阶级利益</label><label><input type="radio" name="q-1397" value="B"><span>B</span> B.看它由哪些阶级成员组成</label><label><input type="radio" name="q-1397" value="C"><span>C</span> C.看它的名称和公开声明</label><label><input type="radio" name="q-1397" value="D"><span>D</span> D.着它产生的时代</label></div>
+        <div class="feedback" id="feedback-q-1397"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1397" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1397')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1397')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1398" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1398</span>
+                <p>【单选】中国共产党同一切剥削阶级政党根本区别是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1398')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1398" value="A"><span>A</span> A.马克思列宁主义的指导</label><label><input type="radio" name="q-1398" value="B"><span>B</span> B.始终代表中国先进生产力发展要求</label><label><input type="radio" name="q-1398" value="C"><span>C</span> C.同人民群众保持密切联系</label><label><input type="radio" name="q-1398" value="D"><span>D</span> D.立党为公.执政为民</label></div>
+        <div class="feedback" id="feedback-q-1398"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1398" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1398')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1398')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1399" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1399</span>
+                <p>【单选】一个政党在社会历史进程中是否起促进作用，取决于该党是否()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1399')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1399" value="A"><span>A</span> A.取得执政地位</label><label><input type="radio" name="q-1399" value="B"><span>B</span> B.代表先进生产方式</label><label><input type="radio" name="q-1399" value="C"><span>C</span> C.维护无产阶级利益</label><label><input type="radio" name="q-1399" value="D"><span>D</span> D.符合统治阶级的需要</label></div>
+        <div class="feedback" id="feedback-q-1399"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1399" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1399')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1399')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1400" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1400</span>
+                <p>【单选】江泽民同志多次强调，要十分重视群众生活问题，明确指出“这是当前我们党和政府工作中一个具有头等意义的大事”。各级党委和政府要加强领导，扎实工作，满腔热情，诚心诚意地做好关心群众生活的工作。这表明()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1400')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1400" value="A"><span>A</span> A.中国共产党集中体现了中国工人阶级的阶级性质</label><label><input type="radio" name="q-1400" value="B"><span>B</span> B.中国共产党的奋斗目标是关心人民群众生活</label><label><input type="radio" name="q-1400" value="C"><span>C</span> C.中国共产党与人民群众心连心</label><label><input type="radio" name="q-1400" value="D"><span>D</span> D.中国共产党的根本宗旨是全心全意为人民服务</label></div>
+        <div class="feedback" id="feedback-q-1400"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1400" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1400')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1400')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1401" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1401</span>
+                <p>【单选】坚持党的领导，就是要坚持党的政治领导.思想领导和组织领导。下列十六次党代表大会确定采取的措施属于思想领导的是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1401')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1401" value="A"><span>A</span> A.提出了依法治国，建设社会主义法治国家</label><label><input type="radio" name="q-1401" value="B"><span>B</span> B.提出了经济体制改革和经济发展的战略目标</label><label><input type="radio" name="q-1401" value="C"><span>C</span> C.高举邓小平理论伟大旗帜，坚持贯彻“三个代表”重要思想</label><label><input type="radio" name="q-1401" value="D"><span>D</span> D.提出要把党建设成为坚强的领导核心</label></div>
+        <div class="feedback" id="feedback-q-1401"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1401" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1401')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1401')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1402" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1402</span>
+                <p>【单选】《中国共产党党章》明确规定，中国共产党是中国工人阶级的先锋队，同时是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1402')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1402" value="A"><span>A</span> A.中国人民的先锋队</label><label><input type="radio" name="q-1402" value="B"><span>B</span> B.中华民族的先锋队</label><label><input type="radio" name="q-1402" value="C"><span>C</span> C.中国人民和中华民族的先锋队</label><label><input type="radio" name="q-1402" value="D"><span>D</span> D.中国新阶层的先锋队</label></div>
+        <div class="feedback" id="feedback-q-1402"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1402" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1402')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1402')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1403" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1403</span>
+                <p>【单选】在全面加强党的建设中始终放在首位的是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1403')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1403" value="A"><span>A</span> A.思想建设</label><label><input type="radio" name="q-1403" value="B"><span>B</span> B.组织建设</label><label><input type="radio" name="q-1403" value="C"><span>C</span> C.作风建设</label><label><input type="radio" name="q-1403" value="D"><span>D</span> D.干部队伍建设</label></div>
+        <div class="feedback" id="feedback-q-1403"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1403" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1403')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1403')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1404" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1404</span>
+                <p>【单选】“三个代表”重要思想的核心内容是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1404')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1404" value="A"><span>A</span> A.代表中国先进社会生产力的发展要求</label><label><input type="radio" name="q-1404" value="B"><span>B</span> B.代表中国先进文化的前进方向</label><label><input type="radio" name="q-1404" value="C"><span>C</span> C.代表中国最广大人民的根本利益</label><label><input type="radio" name="q-1404" value="D"><span>D</span> D.代表工人阶级的阶级性与先进性</label></div>
+        <div class="feedback" id="feedback-q-1404"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1404" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1404')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1404')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1405" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1405</span>
+                <p>【单选】中国共产党十七大报告指出，加强党的反腐倡廉建设的重点是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1405')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1405" value="A"><span>A</span> A.完善惩治和预防腐败体系</label><label><input type="radio" name="q-1405" value="B"><span>B</span> B造就高素质党员.干部队伍</label><label><input type="radio" name="q-1405" value="C"><span>C</span> C.保持同人民群众的血肉联系</label><label><input type="radio" name="q-1405" value="D"><span>D</span> D.健全民主集中制</label></div>
+        <div class="feedback" id="feedback-q-1405"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1405" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1405')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1405')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1406" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1406</span>
+                <p>【单选】加强和改进党的作风建设的组织保证是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1406')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1406" value="A"><span>A</span> A.坚持任人唯贤</label><label><input type="radio" name="q-1406" value="B"><span>B</span> B.坚持民主集中制</label><label><input type="radio" name="q-1406" value="C"><span>C</span> C.坚持党管干部</label><label><input type="radio" name="q-1406" value="D"><span>D</span> D.坚持群众公认</label></div>
+        <div class="feedback" id="feedback-q-1406"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1406" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1406')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1406')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1407" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1407</span>
+                <p>【单选】我们党保持先进性.始终成为建设中国特色社会主义坚强领导核心的基本要求是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1407')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1407" value="A"><span>A</span> A.坚持“三个代表”重要思想的要求</label><label><input type="radio" name="q-1407" value="B"><span>B</span> B.坚持解放思想，实事求是</label><label><input type="radio" name="q-1407" value="C"><span>C</span> C.坚持马克思列宁主义.毛泽东思想.邓小平理论</label><label><input type="radio" name="q-1407" value="D"><span>D</span> D.坚持全心全意为人民服务的宗旨</label></div>
+        <div class="feedback" id="feedback-q-1407"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1407" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1407')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1407')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1408" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1408</span>
+                <p>【单选】党的全部工作和战斗力的基础是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1408')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1408" value="A"><span>A</span> A.党的基层组织</label><label><input type="radio" name="q-1408" value="B"><span>B</span> B.党的骨干分子</label><label><input type="radio" name="q-1408" value="C"><span>C</span> C.党的核心力量</label><label><input type="radio" name="q-1408" value="D"><span>D</span> D.党的工作制度</label></div>
+        <div class="feedback" id="feedback-q-1408"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1408" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1408')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1408')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1409" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1409</span>
+                <p>【单选】十七大提出的关于党的建设的战略思想.战略任务是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1409')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1409" value="A"><span>A</span> A.按照“三个代表”加强党的建设</label><label><input type="radio" name="q-1409" value="B"><span>B</span> B.以改革创新精神加强党的建设</label><label><input type="radio" name="q-1409" value="C"><span>C</span> C.以“三讲”加强党的建设</label><label><input type="radio" name="q-1409" value="D"><span>D</span> D.以科学发展观加强党的建设</label></div>
+        <div class="feedback" id="feedback-q-1409"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1409" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1409')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1409')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1410" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1410</span>
+                <p>【单选】中国共产党十七大报告指出，加强党的思想建设的重点是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1410')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1410" value="A"><span>A</span> A.坚定理想信念</label><label><input type="radio" name="q-1410" value="B"><span>B</span> B.造就高素质党员.干部队伍</label><label><input type="radio" name="q-1410" value="C"><span>C</span> C.保持同人民群众的血肉联系</label><label><input type="radio" name="q-1410" value="D"><span>D</span> D.健全民主集中制</label></div>
+        <div class="feedback" id="feedback-q-1410"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1410" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1410')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1410')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1411" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1411</span>
+                <p>【单选】中国共产党十七大报告指出，加强党的组织建设的重点是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1411')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1411" value="A"><span>A</span> A.坚定理想信念</label><label><input type="radio" name="q-1411" value="B"><span>B</span> B.造就高素质党员.干部队伍</label><label><input type="radio" name="q-1411" value="C"><span>C</span> C.保持同人民群众的血肉联系</label><label><input type="radio" name="q-1411" value="D"><span>D</span> D.健全民主集中制</label></div>
+        <div class="feedback" id="feedback-q-1411"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1411" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1411')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1411')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1412" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1412</span>
+                <p>【单选】中国共产党十七大报告指出，加强党的作风建设的重点是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1412')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1412" value="A"><span>A</span> A.坚定理想信念</label><label><input type="radio" name="q-1412" value="B"><span>B</span> B.造就高素质党员.干部队伍</label><label><input type="radio" name="q-1412" value="C"><span>C</span> C.保持同人民群众的血肉联系</label><label><input type="radio" name="q-1412" value="D"><span>D</span> D.健全民主集中制</label></div>
+        <div class="feedback" id="feedback-q-1412"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1412" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1412')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1412')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1413" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1413</span>
+                <p>【单选】中国的社会主义事业能不能巩固和发展下去，中国能不能在激烈国际斗争中强盛不衰，关键是能不能（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1413')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1413" value="A"><span>A</span> A.高举邓小平理论伟大旗帜，全面贯彻“三个代表”重要思想</label><label><input type="radio" name="q-1413" value="B"><span>B</span> B.提高广大人民群众的思想道德素质和科学文化素质</label><label><input type="radio" name="q-1413" value="C"><span>C</span> C.不断培养造就大批高素质的领导人才</label><label><input type="radio" name="q-1413" value="D"><span>D</span> D.坚持党的基本理论.基本路线.基本纲领.基本经验</label></div>
+        <div class="feedback" id="feedback-q-1413"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1413" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1413')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1413')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1414" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1414</span>
+                <p>【单选】我们党第一个全面总结党的执政经验.指导全党担当起执政兴国历史使命的纲领性文件是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1414')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1414" value="A"><span>A</span> A.《中共中央关于加强党的执政能力建设的重要决定》</label><label><input type="radio" name="q-1414" value="B"><span>B</span> B.《中共中央关于完善社会主义市场经济体制若干问题的决定》</label><label><input type="radio" name="q-1414" value="C"><span>C</span> C.《中共中央关于构建社会主义和谐社会若干重大问题的决定》</label><label><input type="radio" name="q-1414" value="D"><span>D</span> D.《党内民主监督条例》</label></div>
+        <div class="feedback" id="feedback-q-1414"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1414" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1414')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1414')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1415" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1415</span>
+                <p>【单选】在执政条件下，加强党的建设，重点是加强()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1415')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1415" value="A"><span>A</span> A.思想理论建设</label><label><input type="radio" name="q-1415" value="B"><span>B</span> B.制度建设</label><label><input type="radio" name="q-1415" value="C"><span>C</span> C.组织建设</label><label><input type="radio" name="q-1415" value="D"><span>D</span> D.执政能力建设</label></div>
+        <div class="feedback" id="feedback-q-1415"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1415" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1415')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1415')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1416" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1416</span>
+                <p>【单选】加强党的执政能力建设的核心是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1416')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1416" value="A"><span>A</span> A.加强党的理论建设</label><label><input type="radio" name="q-1416" value="B"><span>B</span> B.加强党的先进性建设</label><label><input type="radio" name="q-1416" value="C"><span>C</span> C.保持党和人民群众的血肉联系</label><label><input type="radio" name="q-1416" value="D"><span>D</span> D.思想建设</label></div>
+        <div class="feedback" id="feedback-q-1416"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1416" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1416')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1416')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1417" data-answer="D">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1417</span>
+                <p>【单选】提高党的执政能力的关键是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1417')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1417" value="A"><span>A</span> A.在于加强党的作风建设</label><label><input type="radio" name="q-1417" value="B"><span>B</span> B.在于加强党的组织建设</label><label><input type="radio" name="q-1417" value="C"><span>C</span> C.在于加强党的制度建设</label><label><input type="radio" name="q-1417" value="D"><span>D</span> D.在于加强党的建设</label></div>
+        <div class="feedback" id="feedback-q-1417"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1417" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1417')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1417')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1418" data-answer="B">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1418</span>
+                <p>【单选】“我们的共产党和共产党领导的八路军.新四军，是革命的队伍。我们这个队伍完全是为着解放人民的，是彻底地为人民的利益工作的。”毛泽东的这段话所表达的基本意思是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1418')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1418" value="A"><span>A</span> A.一切从实际出发</label><label><input type="radio" name="q-1418" value="B"><span>B</span> B.一切为了群众.一切依靠群众</label><label><input type="radio" name="q-1418" value="C"><span>C</span> C.从群众中来.到群众中去</label><label><input type="radio" name="q-1418" value="D"><span>D</span> D.虚心向群众学习</label></div>
+        <div class="feedback" id="feedback-q-1418"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1418" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1418')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1418')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1419" data-answer="C">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1419</span>
+                <p>【单选】党的根本工作路线是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1419')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1419" value="A"><span>A</span> A.实事求是</label><label><input type="radio" name="q-1419" value="B"><span>B</span> B.调查研究</label><label><input type="radio" name="q-1419" value="C"><span>C</span> C.群众路线</label><label><input type="radio" name="q-1419" value="D"><span>D</span> D.谦虚谨慎</label></div>
+        <div class="feedback" id="feedback-q-1419"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1419" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1419')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1419')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1420" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1420</span>
+                <p>【单选】毛泽东在中共七大提出的，共产党人“区别于其他任何政党的显著标志之一”是指（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1420')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1420" value="A"><span>A</span> A.党的群众路线</label><label><input type="radio" name="q-1420" value="B"><span>B</span> B.党的三大作风</label><label><input type="radio" name="q-1420" value="C"><span>C</span> C.党的最低纲领</label><label><input type="radio" name="q-1420" value="D"><span>D</span> D.党的思想理论</label></div>
+        <div class="feedback" id="feedback-q-1420"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1420" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1420')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1420')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1421" data-answer="A">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1421</span>
+                <p>【单选】在中国共产党的七届二中全会上，毛泽东告诫全党：“务必使同志们继续地保持谦虚.谨慎.不骄.不躁的作风，务必使同志们继续地保持艰苦奋斗的作风。”其原因主要是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1421')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="radio" name="q-1421" value="A"><span>A</span> A.中国共产党即将成为执政党</label><label><input type="radio" name="q-1421" value="B"><span>B</span> B.党的工作方式发生变化</label><label><input type="radio" name="q-1421" value="C"><span>C</span> C.全国大陆即将解放</label><label><input type="radio" name="q-1421" value="D"><span>D</span> D.中国将由新民主主义社会转变为社会主义社会</label></div>
+        <div class="feedback" id="feedback-q-1421"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1421" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1421')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1421')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1422" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1422</span>
+                <p>【多选】中国共产党是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1422')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1422" value="A"><span>A</span> A.中国工人阶级的先锋队</label><label><input type="checkbox" name="q-1422" value="B"><span>B</span> B中国各族人民利益的忠实代表</label><label><input type="checkbox" name="q-1422" value="C"><span>C</span> C.中国社会主义事业的领导核心</label><label><input type="checkbox" name="q-1422" value="D"><span>D</span> D.以实现共产主义社会制度为最终目的</label></div>
+        <div class="feedback" id="feedback-q-1422"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1422" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1422')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1422')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1423" data-answer="ACD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1423</span>
+                <p>【多选】共产党的领导主要包括()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1423')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1423" value="A"><span>A</span> A.政治领导</label><label><input type="checkbox" name="q-1423" value="B"><span>B</span> B.经济领导</label><label><input type="checkbox" name="q-1423" value="C"><span>C</span> C.组织领导</label><label><input type="checkbox" name="q-1423" value="D"><span>D</span> D.思想领导</label></div>
+        <div class="feedback" id="feedback-q-1423"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1423" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1423')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1423')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1424" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1424</span>
+                <p>【多选】坚持党的领导的根本原则是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1424')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1424" value="A"><span>A</span> A.坚持党对国家大政方针和全局工作的政治领导</label><label><input type="checkbox" name="q-1424" value="B"><span>B</span> B.坚持党对军队和其他人民民主专政的国家机器的绝对领导</label><label><input type="checkbox" name="q-1424" value="C"><span>C</span> C.坚持党管干部的原则</label><label><input type="checkbox" name="q-1424" value="D"><span>D</span> D.坚持党对意识形态领域的领导和共产党领导的多党合作</label></div>
+        <div class="feedback" id="feedback-q-1424"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1424" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1424')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1424')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1425" data-answer="ACD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1425</span>
+                <p>【多选】在新的历史条件下，判断人们政治上先进与落后的标准，主要应该看()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1425')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1425" value="A"><span>A</span> A.他们的思想政治状况和现实表现</label><label><input type="checkbox" name="q-1425" value="B"><span>B</span> B.他们有没有财产，有多少财产</label><label><input type="checkbox" name="q-1425" value="C"><span>C</span> C.他们的财产是怎样得来的以及财产怎样支配和使用</label><label><input type="checkbox" name="q-1425" value="D"><span>D</span> D.他们以自己的劳动对建设中国特色社会主义事业所作的贡献</label></div>
+        <div class="feedback" id="feedback-q-1425"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1425" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1425')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1425')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1426" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1426</span>
+                <p>【多选】建设社会主义和谐社会关键在党，坚持立党为公.执政为民，在和谐社会建设中发挥党的领导核心作用就是指()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1426')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1426" value="A"><span>A</span> A.以党的执政能力建设和先进性建设推动和谐社会建设并提供政治保证</label><label><input type="checkbox" name="q-1426" value="B"><span>B</span> B.以党内和谐促进社会和谐</label><label><input type="checkbox" name="q-1426" value="C"><span>C</span> C.提高党领导社会主义和谐社会建设的本领</label><label><input type="checkbox" name="q-1426" value="D"><span>D</span> D.勤政廉洁，以党的优秀作风营造和谐的党群关系</label></div>
+        <div class="feedback" id="feedback-q-1426"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1426" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1426')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1426')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1427" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1427</span>
+                <p>【多选】坚持马列主义.毛泽东思想.邓小平理论和“三个代表”重要思想的实质，就是要()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1427')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1427" value="A"><span>A</span> A.坚持马克思主义的指导地位</label><label><input type="checkbox" name="q-1427" value="B"><span>B</span> B.坚定不移地走建设有中国特色社会主义的道路</label><label><input type="checkbox" name="q-1427" value="C"><span>C</span> C.发挥中国共产党总揽全局.协调各方的作用</label><label><input type="checkbox" name="q-1427" value="D"><span>D</span> D.在实践中不断丰富和发展马克思主义</label></div>
+        <div class="feedback" id="feedback-q-1427"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1427" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1427')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1427')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1428" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1428</span>
+                <p>【多选】中国共产党的指导思想是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1428')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1428" value="A"><span>A</span> A.马克思列宁主义</label><label><input type="checkbox" name="q-1428" value="B"><span>B</span> B.毛泽东思想</label><label><input type="checkbox" name="q-1428" value="C"><span>C</span> C.邓小平理论</label><label><input type="checkbox" name="q-1428" value="D"><span>D</span> D.“三个代表”重要思想</label></div>
+        <div class="feedback" id="feedback-q-1428"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1428" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1428')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1428')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1429" data-answer="ACD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1429</span>
+                <p>【多选】我们党在新时期的三大历史任务是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1429')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1429" value="A"><span>A</span> A.推进现代化建设</label><label><input type="checkbox" name="q-1429" value="B"><span>B</span> B.加强党的执政能力建设</label><label><input type="checkbox" name="q-1429" value="C"><span>C</span> C.完成祖国统一</label><label><input type="checkbox" name="q-1429" value="D"><span>D</span> D.维护世界和平与促进共同发展</label></div>
+        <div class="feedback" id="feedback-q-1429"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1429" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1429')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1429')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1430" data-answer="BCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1430</span>
+                <p>【多选】工人阶级是近代以来我国社会化大生产发展的产物。我国工人阶级的优秀品格是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1430')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1430" value="A"><span>A</span> A.在中国人口中占大多数</label><label><input type="checkbox" name="q-1430" value="B"><span>B</span> B.大公无私</label><label><input type="checkbox" name="q-1430" value="C"><span>C</span> C.具有严格的组织纪律性</label><label><input type="checkbox" name="q-1430" value="D"><span>D</span> D.具有革命的坚定性彻底性</label></div>
+        <div class="feedback" id="feedback-q-1430"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1430" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1430')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1430')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1431" data-answer="ABC">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1431</span>
+                <p>【多选】看一个政党是否先进，是不是工人阶级先锋队，主要应该看它的理论和纲领是不是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1431')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1431" value="A"><span>A</span> A.马克思主义的</label><label><input type="checkbox" name="q-1431" value="B"><span>B</span> B.代表社会发展的正确方向</label><label><input type="checkbox" name="q-1431" value="C"><span>C</span> C.代表最广大人民的根本利益</label><label><input type="checkbox" name="q-1431" value="D"><span>D</span> D.代表全人类的利益</label></div>
+        <div class="feedback" id="feedback-q-1431"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1431" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1431')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1431')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1432" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1432</span>
+                <p>【多选】体现和保持无产阶级政党先进性的条件有()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1432')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1432" value="A"><span>A</span> A.由无产阶级先进分子组成</label><label><input type="checkbox" name="q-1432" value="B"><span>B</span> B.以马克思主义为指导思想</label><label><input type="checkbox" name="q-1432" value="C"><span>C</span> C.实行民主集中制的组织原则</label><label><input type="checkbox" name="q-1432" value="D"><span>D</span> D.党内不允许有任何政治派别存在</label></div>
+        <div class="feedback" id="feedback-q-1432"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1432" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1432')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1432')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1433" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1433</span>
+                <p>【多选】党的十五大以后，反腐败进入标本兼治的新阶段，反腐败的主要措施是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1433')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1433" value="A"><span>A</span> A.深入进行党性党风党纪和廉政教育</label><label><input type="checkbox" name="q-1433" value="B"><span>B</span> B.切实抓好法规和制度的建设</label><label><input type="checkbox" name="q-1433" value="C"><span>C</span> C.进一步加大党内外各种监督的力度</label><label><input type="checkbox" name="q-1433" value="D"><span>D</span> D.继续通过深化改革铲除滋生腐败的土壤</label></div>
+        <div class="feedback" id="feedback-q-1433"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1433" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1433')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1433')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1434" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1434</span>
+                <p>【多选】在新的历史时期，加强党的建设具有特殊重要性。这是因为，党现在面临()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1434')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1434" value="A"><span>A</span> A.执政的考验</label><label><input type="checkbox" name="q-1434" value="B"><span>B</span> B.和平演变的考验</label><label><input type="checkbox" name="q-1434" value="C"><span>C</span> C.改革开放的考验</label><label><input type="checkbox" name="q-1434" value="D"><span>D</span> D.发展市场经济的考验</label></div>
+        <div class="feedback" id="feedback-q-1434"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1434" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1434')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1434')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1435" data-answer="ABC">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1435</span>
+                <p>【多选】新时期党的建设的“三方面建设”主要包括()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1435')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1435" value="A"><span>A</span> A.思想建设</label><label><input type="checkbox" name="q-1435" value="B"><span>B</span> B.组织建设</label><label><input type="checkbox" name="q-1435" value="C"><span>C</span> C.作风建设</label><label><input type="checkbox" name="q-1435" value="D"><span>D</span> D.廉政建设</label></div>
+        <div class="feedback" id="feedback-q-1435"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1435" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1435')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1435')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1436" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1436</span>
+                <p>【多选】当代中国先进文化的前进方向就是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1436')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1436" value="A"><span>A</span> A.以马克思列宁主义.毛泽东思想.邓小平理论和“三个代表”重要思想为指导</label><label><input type="checkbox" name="q-1436" value="B"><span>B</span> B.以培育“四有”新人为目标</label><label><input type="checkbox" name="q-1436" value="C"><span>C</span> C.发展面向现代化.面向世界.面向未来的民族的.科学的.大众的中国特色的社会主义文化</label><label><input type="checkbox" name="q-1436" value="D"><span>D</span> D.努力加强社会主义精神文明建设</label></div>
+        <div class="feedback" id="feedback-q-1436"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1436" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1436')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1436')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1437" data-answer="ABD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1437</span>
+                <p>【多选】党的建设包括思想建设.组织建设和作风建设。三者的关系是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1437')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1437" value="A"><span>A</span> A.思想建设是组织建设和作风建设的基础</label><label><input type="checkbox" name="q-1437" value="B"><span>B</span> B.组织建设是思想建设和作风建设的保证</label><label><input type="checkbox" name="q-1437" value="C"><span>C</span> C.组织建设是思想建设和作风建设的基础</label><label><input type="checkbox" name="q-1437" value="D"><span>D</span> D.作风建设同思想建设和组织建设是密不可分的</label></div>
+        <div class="feedback" id="feedback-q-1437"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1437" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1437')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1437')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1438" data-answer="ABC">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1438</span>
+                <p>【多选】党的十七大提出以改革创新精神加强党的建设的重要性.必要性在于()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1438')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1438" value="A"><span>A</span> A.以改革创新精神加强党的建设，是时代发展的必然要求；当今世界，新科技革命突飞猛进和广泛应用，在世界范围内兴起了以增强综合国力为中心目标的改革.调整浪潮，以改革创新精神加强党的建设，是与时俱进地把握了时代要求和世界大势</label><label><input type="checkbox" name="q-1438" value="B"><span>B</span> B.以改革创新的精神加强党的建设，是我们党要更好地领导改革开放和社会主义现代化事业的必然要求；新时期最鲜明的特点是改革开放，最突出的标志是与时俱进；在时代前列领导改革开放，关键在于以改革创新精神加强党的建设</label><label><input type="checkbox" name="q-1438" value="C"><span>C</span> C.也是适应党的队伍不断发展变化，切实解决党自身建设新矛盾新问题的必然要求；党领导改革开放30年，治国理政.自身建设取得伟大成就，同时也产生了一系列新的矛盾.新的问题；必然要求我们以改革创新的精神，推进党的建设在不断改进和创新中得到加强</label><label><input type="checkbox" name="q-1438" value="D"><span>D</span> D.是贯彻落实科学发展观.和谐社会建设构想的必然要求</label></div>
+        <div class="feedback" id="feedback-q-1438"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1438" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1438')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1438')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1439" data-answer="AB">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1439</span>
+                <p>【多选】十七大提出党的建设主线是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1439')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1439" value="A"><span>A</span> A.先进性建设</label><label><input type="checkbox" name="q-1439" value="B"><span>B</span> B.执政能力建设</label><label><input type="checkbox" name="q-1439" value="C"><span>C</span> C.作风建设</label><label><input type="checkbox" name="q-1439" value="D"><span>D</span> D.思想建设</label></div>
+        <div class="feedback" id="feedback-q-1439"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1439" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1439')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1439')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1440" data-answer="ABC">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1440</span>
+                <p>【多选】党的建设的基本原则.基本要求是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1440')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1440" value="A"><span>A</span> A.党要管党</label><label><input type="checkbox" name="q-1440" value="B"><span>B</span> B.从严治党</label><label><input type="checkbox" name="q-1440" value="C"><span>C</span> C.为民.务实.清廉</label><label><input type="checkbox" name="q-1440" value="D"><span>D</span> D.学习.创新</label></div>
+        <div class="feedback" id="feedback-q-1440"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1440" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1440')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1440')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1441" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1441</span>
+                <p>【多选】按照党的建设的总体布局和总要求，党的建设的重点是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1441')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1441" value="A"><span>A</span> A.以坚定理想信念为重点加强思想建设，以造就高素质党员.干部队伍为重点加强组织建设</label><label><input type="checkbox" name="q-1441" value="B"><span>B</span> B.以保持党同人民群众的血肉联系为重点加强作风建设</label><label><input type="checkbox" name="q-1441" value="C"><span>C</span> C.以健全民主集中制为重点加强制度建设</label><label><input type="checkbox" name="q-1441" value="D"><span>D</span> D.以完善惩治和预防腐败体系为重点加强反腐倡廉建设</label></div>
+        <div class="feedback" id="feedback-q-1441"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1441" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1441')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1441')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1442" data-answer="AC">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1442</span>
+                <p>【多选】新时期党的建设面临的“两大课题”是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1442')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1442" value="A"><span>A</span> A.不断提高领导水平和执政水平</label><label><input type="checkbox" name="q-1442" value="B"><span>B</span> B.加强基层建设</label><label><input type="checkbox" name="q-1442" value="C"><span>C</span> C.不断增强拒腐防变的能力</label><label><input type="checkbox" name="q-1442" value="D"><span>D</span> D.加快发展党员</label></div>
+        <div class="feedback" id="feedback-q-1442"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1442" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1442')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1442')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1443" data-answer="ABC">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1443</span>
+                <p>【多选】中国共产党在长期斗争中形成的三大优良作风是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1443')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1443" value="A"><span>A</span> A.理论联系实际</label><label><input type="checkbox" name="q-1443" value="B"><span>B</span> B.批评与自我批评</label><label><input type="checkbox" name="q-1443" value="C"><span>C</span> C.密切联系群众</label><label><input type="checkbox" name="q-1443" value="D"><span>D</span> D.为人民服务</label></div>
+        <div class="feedback" id="feedback-q-1443"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1443" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1443')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1443')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1444" data-answer="ACD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1444</span>
+                <p>【多选】新时期党的建设的“三大优势”是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1444')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1444" value="A"><span>A</span> A.党的思想政治优势</label><label><input type="checkbox" name="q-1444" value="B"><span>B</span> B.干部队伍优势</label><label><input type="checkbox" name="q-1444" value="C"><span>C</span> C.党的组织优势</label><label><input type="checkbox" name="q-1444" value="D"><span>D</span> D.党密切联系群众的优势</label></div>
+        <div class="feedback" id="feedback-q-1444"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1444" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1444')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1444')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1445" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1445</span>
+                <p>【多选】胡锦涛同志在庆祝中国共产党成立85周年暨总结保持共产党员先进性教育活动大会上的讲话中提出的进一步推进党的先进性建设的基本要求是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1445')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1445" value="A"><span>A</span> A.紧密结合贯彻落实科学发展观的实践，加强党的先进性建设</label><label><input type="checkbox" name="q-1445" value="B"><span>B</span> B.紧密结合构建社会主义和谐社会的实践，加强党的先进性建设</label><label><input type="checkbox" name="q-1445" value="C"><span>C</span> C.紧密结合加强党的执政能力建设的实践，加强党的先进性建设</label><label><input type="checkbox" name="q-1445" value="D"><span>D</span> D.紧密结合保持党同人民群众血肉联系的实践，加强党的先进性建设</label></div>
+        <div class="feedback" id="feedback-q-1445"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1445" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1445')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1445')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1446" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1446</span>
+                <p>【多选】加强党的执政能力建设的总体目标是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1446')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1446" value="A"><span>A</span> A.使党始终成为立党为公.执政为民的执政党</label><label><input type="checkbox" name="q-1446" value="B"><span>B</span> B.成为科学执政.民主执政.依法执政的执政党</label><label><input type="checkbox" name="q-1446" value="C"><span>C</span> C.成为求真务实.开拓创新.勤政高效.清正廉洁的执政党</label><label><input type="checkbox" name="q-1446" value="D"><span>D</span> D.归根到底成为始终做到“三个代表”，永远保持先进性.经得住各种风浪考验的马克思主义执政党</label></div>
+        <div class="feedback" id="feedback-q-1446"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1446" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1446')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1446')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1447" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1447</span>
+                <p>【多选】党的执政能力建设的主要任务是()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1447')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1447" value="A"><span>A</span> A.坚持把发展作为党执政兴国的第一要务，不断提高驾驭社会主义市场经济的能力</label><label><input type="checkbox" name="q-1447" value="B"><span>B</span> B.坚持党的领导.人民当家作主和依法治国的有机统一，不断提高发展社会主义民主政治的能力</label><label><input type="checkbox" name="q-1447" value="C"><span>C</span> C.坚持马克思主义在意识形态领域的指导地位，不断提高建设社会主义先进文化的能力</label><label><input type="checkbox" name="q-1447" value="D"><span>D</span> D.坚持最广泛最充分地调动一切积极因素，不断提高构建社会主义和谐社会的能力；坚持独立自主的和平外交，不断提高应对国际局势和处理国际事务的能力</label></div>
+        <div class="feedback" id="feedback-q-1447"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1447" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1447')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1447')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1448" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1448</span>
+                <p>【多选】“紧握人民的手，管住官员的手，打造无形的手，强化服务的手，缔造和平的手。”这一形象地概括体现了中国共产党的一系列执政新理念，就是（）</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1448')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1448" value="A"><span>A</span> A.立党为公，执政为民</label><label><input type="checkbox" name="q-1448" value="B"><span>B</span> B.充分发挥经济.法律.行政等无形手段的调节作用</label><label><input type="checkbox" name="q-1448" value="C"><span>C</span> C.认真履行经济管理.社会服务的职能</label><label><input type="checkbox" name="q-1448" value="D"><span>D</span> D.加大反腐败工作的力度</label></div>
+        <div class="feedback" id="feedback-q-1448"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1448" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1448')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1448')">确认</button>
+    </div>
+    
+    <div class="question-block" id="q-1449" data-answer="ABCD">
+        <div class="question-header">
+            <div class="question-title">
+                <span class="question-id">1449</span>
+                <p>【多选】“党同人民群众的关系如何，是关系到党的兴衰成败和党的生死存亡的一个根本政治问题。”我们之所以特别强调密切党群关系，是因为()</p>
+            </div>
+            <div class="question-actions">
+                <button class="icon-btn favorite-btn" onclick="toggleFavorite('1449')" title="收藏">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+        <div class="options"><label><input type="checkbox" name="q-1449" value="A"><span>A</span> A.人民群众是历史的创造者</label><label><input type="checkbox" name="q-1449" value="B"><span>B</span> B.我们党以全心全意为人民服务为唯一宗旨</label><label><input type="checkbox" name="q-1449" value="C"><span>C</span> C.群众路线是党的根本工作路线</label><label><input type="checkbox" name="q-1449" value="D"><span>D</span> D.人民群众是我们党的力量的源泉</label></div>
+        <div class="feedback" id="feedback-q-1449"></div>
+        <div class="note-section">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <span>我的笔记</span>
+                </summary>
+                <textarea id="note-q-1449" placeholder="在此输入您的笔记..."></textarea>
+                <button class="save-note-btn" onclick="saveNote('1449')">保存笔记</button>
+            </details>
+        </div>
+        <button class="check-btn" onclick="checkAnswer('1449')">确认</button>
+    </div>
+    
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => { updateAllFavoriteIcons(); loadAllNotes(); });</script>
+</body>
+</html>
