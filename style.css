@@ -120,7 +120,8 @@ body {
 .feedback { margin-top: 15px; font-weight: 600; padding: 12px; border-radius: 12px; }
 .feedback.correct { color: var(--success); background-color: color-mix(in srgb, var(--success) 15%, transparent); border: 1px solid color-mix(in srgb, var(--success) 30%, transparent); }
 .feedback.incorrect { color: var(--danger); background-color: color-mix(in srgb, var(--danger) 15%, transparent); border: 1px solid color-mix(in srgb, var(--danger) 30%, transparent); }
-.actions-footer { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 20px; }
+.actions-footer { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 20px; flex-wrap: wrap; gap: 15px; }
+.note-section { flex-grow: 1; }
 .note-section details { position: relative; }
 .note-section summary { cursor: pointer; font-weight: 600; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; }
 .note-content { margin-top: 10px; }

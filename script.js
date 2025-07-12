@@ -50,8 +50,8 @@ function checkAnswer(questionId) {
 
 function logError(questionId) {
     let errors = getStoreArray('maogaiErrors');
-    if (!errors.includes(questionId)) {
-        errors.push(questionId);
+    if (!errors.includes(String(questionId))) {
+        errors.push(String(questionId));
         setStore('maogaiErrors', errors);
     }
 }
@@ -59,14 +59,14 @@ function logError(questionId) {
 function toggleFavorite(questionId) {
     let favorites = getStoreArray('maogaiFavorites');
     const button = document.querySelector(`#q-${questionId} .favorite-btn`);
-    const index = favorites.indexOf(questionId);
+    const index = favorites.indexOf(String(questionId));
 
     if (index > -1) {
         favorites.splice(index, 1);
         button?.classList.remove('favorited');
         showToast('已取消收藏');
     } else {
-        favorites.push(questionId);
+        favorites.push(String(questionId));
         button?.classList.add('favorited');
         showToast('已收藏');
     }
@@ -144,60 +144,59 @@ function updateAllFavoriteIcons() {
 
 function loadContent(type) {
     document.addEventListener('DOMContentLoaded', () => {
-        const key = type === 'errors' ? 'maogaiErrors' : 'maogaiFavorites';
-        const ids = getStoreArray(key);
         const container = document.getElementById('content-container');
-        
-        if (ids.length === 0) {
-            container.innerHTML = `<p style="text-align:center; color: var(--text-secondary);">${type === 'errors' ? '太棒了！您的错题本是空的。' : '您的收藏夹是空的。'}</p>`;
+        let ids;
+        let pageTypeForRemoval = null;
+
+        if (type === 'errors' || type === 'favorites') {
+            ids = getStoreArray(type === 'errors' ? 'maogaiErrors' : 'maogaiFavorites');
+            pageTypeForRemoval = type;
+        } else if (type === 'knowledge') {
+            const errorIds = getStoreArray('maogaiErrors');
+            const favoriteIds = getStoreArray('maogaiFavorites');
+            const notedIds = Object.keys(getStore('maogaiNotes'));
+            ids = [...new Set([...errorIds, ...favoriteIds, ...notedIds.map(String)])].sort((a, b) => parseInt(a) - parseInt(b));
+        }
+
+        if (!ids || ids.length === 0) {
+            const messages = {
+                errors: '太棒了！您的错题本是空的。',
+                favorites: '您的收藏夹是空的。',
+                knowledge: '这里会自动汇总您的错题、收藏和笔记。现在还是空的哦！'
+            };
+            container.innerHTML = `<p style="text-align:center; color: var(--text-secondary);">${messages[type]}</p>`;
+            if (type === 'knowledge') {
+                 const actionButtons = document.querySelector('.action-buttons');
+                 if(actionButtons) actionButtons.style.display = 'none';
+            }
             return;
         }
         
-        // 为错题本生成带移除按钮的题目
         container.innerHTML = ids.map(id => {
             const q = ALL_QUESTIONS.find(q => q.id == id);
-            return q ? generateQuestionHTML(q, null, type) : '';
+            // 知识库页面也需要能移除题目
+            const removalType = pageTypeForRemoval || (getStoreArray('maogaiErrors').includes(id) ? 'errors' : 'favorites');
+            return q ? generateQuestionHTML(q, null, removalType, type === 'knowledge') : '';
         }).join('');
         
         updateAllFavoriteIcons();
         loadAllNotes();
-    });
-}
 
-function loadKnowledgePoints() {
-    document.addEventListener('DOMContentLoaded', () => {
-        const errorIds = getStoreArray('maogaiErrors');
-        const favoriteIds = getStoreArray('maogaiFavorites');
-        const notedIds = Object.keys(getStore('maogaiNotes'));
-        const combinedIds = [...new Set([...errorIds, ...favoriteIds, ...notedIds.map(String)])].sort((a, b) => parseInt(a) - parseInt(b));
-        
-        const container = document.getElementById('knowledge-content');
-        const actionButtons = document.querySelector('.action-buttons');
-        
-        if (combinedIds.length === 0) {
-            container.innerHTML = '<p style="text-align:center; color: var(--text-secondary);">这里会自动汇总您的错题、收藏和笔记。现在还是空的哦！</p>';
-            if (actionButtons) actionButtons.style.display = 'none';
-            return;
+        if (type === 'knowledge') {
+            setupActionButtons(ids);
         }
-        
-        container.innerHTML = combinedIds.map(id => {
-            const q = ALL_QUESTIONS.find(q => q.id == id);
-            return q ? generateKnowledgePointHTML(q) : '';
-        }).join('');
-
-        setupActionButtons(combinedIds);
     });
 }
 
 // --- HTML Generators ---
-function generateQuestionHTML(q, localId, pageType) {
+function generateQuestionHTML(q, localId, pageType, isReviewMode = false) {
     const globalId = q.id;
     const displayId = localId || globalId;
     const q_type = q.answer instanceof Array || (typeof q.answer === 'string' && q.answer.length > 1 && !['正确','错误'].includes(q.answer)) ? '多选' : '单选';
     const normalized_answer = q.answer instanceof Array ? q.answer.sort().join('') : String(q.answer);
     let opts = q.options;
     if (Array.isArray(opts)) opts = Object.fromEntries(opts.map((v, i) => [String.fromCharCode(65 + i), v]));
-    const options_html = Object.entries(opts).map(([k, v]) => `<label><input type="${q_type === '多选' ? 'checkbox' : 'radio'}" name="q-${globalId}" value="${k}"><span>${k}</span> ${v}</label>`).join('');
+    const options_html = Object.entries(opts).map(([k, v]) => `<label><input type="${q_type === '多选' ? 'checkbox' : 'radio'}" name="q-${globalId}" value="${k}" ${isReviewMode ? 'disabled' : ''}><span>${k}</span> ${v}</label>`).join('');
     
     let actionButtons = `<button class="icon-btn favorite-btn" onclick="toggleFavorite('${globalId}')" title="收藏"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>`;
     if (pageType === 'errors' || pageType === 'favorites') {
@@ -218,38 +217,17 @@ function generateQuestionHTML(q, localId, pageType) {
                     <div class="note-content"><textarea id="note-q-${globalId}" placeholder="在此输入您的笔记..."></textarea><button class="save-note-btn" onclick="saveNote('${globalId}')">保存</button></div>
                 </details>
             </div>
-            <button class="check-btn" onclick="checkAnswer('${globalId}')">确认</button>
+            ${isReviewMode ? '' : `<button class="check-btn" onclick="checkAnswer('${globalId}')">确认</button>`}
         </div>
-    </div>`;
-}
-
-function generateKnowledgePointHTML(q) {
-    const correct_keys = Array.isArray(q.answer) ? q.answer.sort() : [String(q.answer)];
-    let opts = q.options;
-    if (Array.isArray(opts)) opts = Object.fromEntries(opts.map((v, i) => [String.fromCharCode(65 + i), v]));
-    const options_html = Object.entries(opts).map(([key, value]) => {
-        const style_class = correct_keys.includes(key) ? 'correct' : 'incorrect';
-        const label = correct_keys.includes(key) ? '正确答案' : '干扰项';
-        return `<li class="${style_class}">${key}. ${value} <em>(${label})</em></li>`;
-    }).join('');
-    
-    const note = getStore('maogaiNotes')[q.id] || '';
-    const note_html = note ? `<div class="knowledge-note"><strong>笔记:</strong><p>${note.replace(/\\n/g, '<br>')}</p></div>` : '';
-
-    return `
-    <div class="knowledge-point">
-        <h4>${q.id}. ${q.question}</h4>
-        <ul>${options_html}</ul>
-        ${note_html}
     </div>`;
 }
 
 // --- Export & Print ---
 function setupActionButtons(idsToExport) {
     document.getElementById('print-btn').addEventListener('click', () => {
-        const contentToPrint = document.getElementById('knowledge-content').innerHTML;
+        const contentToPrint = document.getElementById('content-container').innerHTML;
         const printWindow = window.open('', '', 'height=800,width=900');
-        printWindow.document.write(`<!DOCTYPE html><html lang="zh-CN"><head><title>知识点打印</title><meta charset="UTF-8"><link rel="stylesheet" href="style.css"><style>body{padding:20px;background:#fff !important; color: #000 !important;} .container{max-width: 100%; box-shadow:none;border:none} .action-buttons{display:none} @media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style></head><body data-theme="light"><h1>核心知识库</h1>${contentToPrint}</body></html>`);
+        printWindow.document.write(`<!DOCTYPE html><html lang="zh-CN"><head><title>知识点打印</title><meta charset="UTF-8"><link rel="stylesheet" href="style.css"><style>body{padding:20px;background:#fff !important; color: #000 !important;} .container{max-width: 100%; box-shadow:none;border:none} .action-buttons, .question-actions, .note-section, .actions-footer {display:none} @media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style></head><body data-theme="light"><h1>核心知识库</h1>${contentToPrint}</body></html>`);
         printWindow.document.close();
         setTimeout(() => { printWindow.focus(); printWindow.print(); printWindow.close(); }, 500);
     });
