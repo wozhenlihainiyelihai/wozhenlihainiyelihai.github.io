@@ -86,18 +86,89 @@ function saveNote(questionId) {
 }
 
 function removeStoredItem(type, id) {
-    const key = type === 'errors' ? 'maogaiErrors' : 'maogaiFavorites';
-    let items = getStoreArray(key);
-    const newItems = items.filter(itemId => itemId != id);
-    setStore(key, newItems);
+    // In knowledge view, we remove from both lists
+    if (type === 'knowledge') {
+        let errors = getStoreArray('maogaiErrors');
+        let favorites = getStoreArray('maogaiFavorites');
+        const errorIndex = errors.indexOf(String(id));
+        const favIndex = favorites.indexOf(String(id));
+        if (errorIndex > -1) errors.splice(errorIndex, 1);
+        if (favIndex > -1) favorites.splice(favIndex, 1);
+        setStore('maogaiErrors', errors);
+        setStore('maogaiFavorites', favorites);
+    } else { // In error or favorite view
+        const key = type === 'errors' ? 'maogaiErrors' : 'maogaiFavorites';
+        let items = getStoreArray(key);
+        const newItems = items.filter(itemId => itemId != id);
+        setStore(key, newItems);
+    }
     
     const elementToRemove = document.getElementById(`q-${id}`);
-    elementToRemove.style.transition = 'opacity 0.3s, transform 0.3s';
-    elementToRemove.style.opacity = '0';
-    elementToRemove.style.transform = 'scale(0.95)';
-    setTimeout(() => elementToRemove.remove(), 300);
+    if (elementToRemove) {
+        elementToRemove.style.transition = 'opacity 0.3s, transform 0.3s';
+        elementToRemove.style.opacity = '0';
+        elementToRemove.style.transform = 'scale(0.95)';
+        setTimeout(() => elementToRemove.remove(), 300);
+    }
     showToast('已移除');
 }
+
+// --- AI Explanation ---
+async function getAIExplanation(questionId) {
+    const question = ALL_QUESTIONS.find(q => q.id == questionId);
+    if (!question) return;
+
+    const aiSection = document.getElementById(`ai-section-q-${questionId}`);
+    aiSection.innerHTML = `<p>AI正在思考中...<span class="cursor"></span></p>`;
+    aiSection.style.display = 'block';
+
+    const optionsString = JSON.stringify(question.options);
+    const prompt = `你是一位精通《毛泽东思想和中国特色社会主义理论体系概论》的专家。请根据2024年版的教材内容，详细解释以下这道题目。请先分析为什么正确答案是正确的，然后逐一分析其他每个选项为什么是错误的。题目：'${question.question}', 选项：${optionsString}, 正确答案是：'${question.answer}'`;
+    
+    try {
+        let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+        const payload = { contents: chatHistory };
+        const apiKey = ""; 
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+        
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+            throw new Error(`API请求失败，状态码: ${response.status}`);
+        }
+
+        const result = await response.json();
+        
+        let text = "抱歉，解析出错了。";
+        if (result.candidates && result.candidates.length > 0 &&
+            result.candidates[0].content && result.candidates[0].content.parts &&
+            result.candidates[0].content.parts.length > 0) {
+            text = result.candidates[0].content.parts[0].text;
+        }
+        
+        // Typewriter effect
+        aiSection.innerHTML = '<p></p>';
+        const p = aiSection.querySelector('p');
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                p.innerHTML += text.charAt(i).replace(/\n/g, '<br>');
+                i++;
+                setTimeout(typeWriter, 20);
+            }
+        }
+        typeWriter();
+
+    } catch (error) {
+        console.error('Gemini API Error:', error);
+        aiSection.innerHTML = `<p>抱歉，AI解析服务暂时不可用。请稍后再试。</p>`;
+    }
+}
+
 
 // --- Page Loaders & History ---
 function setupHistoryTracker(moduleNum) {
@@ -117,13 +188,15 @@ function setupHistoryTracker(moduleNum) {
 }
 
 function setupHistoryLink() {
-    const history = JSON.parse(localStorage.getItem('maogaiHistory') || 'null');
-    if (history) {
-        const container = document.getElementById('history-link-container');
-        const link = document.getElementById('history-link');
-        link.href = `module_${history.module}.html#${history.questionId}`;
-        container.style.display = 'block';
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const history = JSON.parse(localStorage.getItem('maogaiHistory') || 'null');
+        if (history) {
+            const container = document.getElementById('history-link-container');
+            const link = document.getElementById('history-link');
+            link.href = `module_${history.module}.html#${history.questionId}`;
+            container.style.display = 'block';
+        }
+    });
 }
 
 function loadAllNotes() {
@@ -174,9 +247,12 @@ function loadContent(type) {
         
         container.innerHTML = ids.map(id => {
             const q = ALL_QUESTIONS.find(q => q.id == id);
-            // 知识库页面也需要能移除题目
-            const removalType = pageTypeForRemoval || (getStoreArray('maogaiErrors').includes(id) ? 'errors' : 'favorites');
-            return q ? generateQuestionHTML(q, null, removalType, type === 'knowledge') : '';
+            if (!q) return '';
+            if (type === 'knowledge') {
+                return generateKnowledgePointHTML(q);
+            } else {
+                return generateQuestionHTML(q, null, pageTypeForRemoval);
+            }
         }).join('');
         
         updateAllFavoriteIcons();
@@ -189,14 +265,14 @@ function loadContent(type) {
 }
 
 // --- HTML Generators ---
-function generateQuestionHTML(q, localId, pageType, isReviewMode = false) {
+function generateQuestionHTML(q, localId, pageType) {
     const globalId = q.id;
     const displayId = localId || globalId;
     const q_type = q.answer instanceof Array || (typeof q.answer === 'string' && q.answer.length > 1 && !['正确','错误'].includes(q.answer)) ? '多选' : '单选';
     const normalized_answer = q.answer instanceof Array ? q.answer.sort().join('') : String(q.answer);
     let opts = q.options;
     if (Array.isArray(opts)) opts = Object.fromEntries(opts.map((v, i) => [String.fromCharCode(65 + i), v]));
-    const options_html = Object.entries(opts).map(([k, v]) => `<label><input type="${q_type === '多选' ? 'checkbox' : 'radio'}" name="q-${globalId}" value="${k}" ${isReviewMode ? 'disabled' : ''}><span>${k}</span> ${v}</label>`).join('');
+    const options_html = Object.entries(opts).map(([k, v]) => `<label><input type="${q_type === '多选' ? 'checkbox' : 'radio'}" name="q-${globalId}" value="${k}"><span>${k}</span> ${v}</label>`).join('');
     
     let actionButtons = `<button class="icon-btn favorite-btn" onclick="toggleFavorite('${globalId}')" title="收藏"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>`;
     if (pageType === 'errors' || pageType === 'favorites') {
@@ -211,14 +287,56 @@ function generateQuestionHTML(q, localId, pageType, isReviewMode = false) {
         </div>
         <div class="options">${options_html}</div>
         <div class="feedback" id="feedback-q-${globalId}"></div>
+        <div class="ai-section" id="ai-section-q-${globalId}"></div>
         <div class="actions-footer">
             <div class="note-section">
                 <details><summary><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg><span>我的笔记</span></summary>
                     <div class="note-content"><textarea id="note-q-${globalId}" placeholder="在此输入您的笔记..."></textarea><button class="save-note-btn" onclick="saveNote('${globalId}')">保存</button></div>
                 </details>
             </div>
-            ${isReviewMode ? '' : `<button class="check-btn" onclick="checkAnswer('${globalId}')">确认</button>`}
+            <div class="footer-buttons">
+                 <button class="ai-btn" onclick="getAIExplanation('${globalId}')" title="AI解析"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.41 1.41L16.17 10H4v4h12.17l-5.58 5.59L12 21l8-8-8-8z"/><path d="M22 12h-2"/></svg><span>AI解析</span></button>
+                 <button class="check-btn" onclick="checkAnswer('${globalId}')">确认</button>
+            </div>
         </div>
+    </div>`;
+}
+
+function generateKnowledgePointHTML(q) {
+    const globalId = q.id;
+    const q_type = q.answer instanceof Array || (typeof q.answer === 'string' && q.answer.length > 1 && !['正确','错误'].includes(q.answer)) ? '多选' : '单选';
+    const correct_keys = Array.isArray(q.answer) ? q.answer.sort() : [String(q.answer)];
+    let opts = q.options;
+    if (Array.isArray(opts)) opts = Object.fromEntries(opts.map((v, i) => [String.fromCharCode(65 + i), v]));
+    
+    const options_html = Object.entries(opts).map(([key, value]) => {
+        const isCorrect = correct_keys.includes(key);
+        const style_class = isCorrect ? 'correct' : 'incorrect';
+        const label = isCorrect ? '正确答案' : '干扰项';
+        return `<li class="${style_class}">${key}. ${value} <em>(${label})</em></li>`;
+    }).join('');
+    
+    const note = getStore('maogaiNotes')[q.id] || '';
+    const note_html = `<div class="knowledge-note">
+        <div class="knowledge-note-header">
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+             <span>我的笔记</span>
+        </div>
+        <textarea id="note-q-${globalId}">${note}</textarea>
+        <button class="save-note-btn" onclick="saveNote('${globalId}')">保存笔记</button>
+    </div>`;
+
+    return `
+    <div class="question-block knowledge-point" id="q-${globalId}">
+        <div class="question-header">
+            <div class="question-title"><span class="question-id">${globalId}</span><p>【${q_type}】${q.question}</p></div>
+            <div class="question-actions">
+                 <button class="icon-btn favorite-btn" onclick="toggleFavorite('${globalId}')" title="收藏"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                 <button class="icon-btn remove-btn" onclick="removeStoredItem('knowledge', '${globalId}')" title="从错题本和收藏夹移除"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+            </div>
+        </div>
+        <ul class="options">${options_html}</ul>
+        ${note_html}
     </div>`;
 }
 
@@ -227,7 +345,7 @@ function setupActionButtons(idsToExport) {
     document.getElementById('print-btn').addEventListener('click', () => {
         const contentToPrint = document.getElementById('content-container').innerHTML;
         const printWindow = window.open('', '', 'height=800,width=900');
-        printWindow.document.write(`<!DOCTYPE html><html lang="zh-CN"><head><title>知识点打印</title><meta charset="UTF-8"><link rel="stylesheet" href="style.css"><style>body{padding:20px;background:#fff !important; color: #000 !important;} .container{max-width: 100%; box-shadow:none;border:none} .action-buttons, .question-actions, .note-section, .actions-footer {display:none} @media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style></head><body data-theme="light"><h1>核心知识库</h1>${contentToPrint}</body></html>`);
+        printWindow.document.write(`<!DOCTYPE html><html lang="zh-CN"><head><title>知识点打印</title><meta charset="UTF-8"><link rel="stylesheet" href="style.css"><style>body{padding:20px;background:#fff !important; color: #000 !important;} .container{max-width: 100%; box-shadow:none;border:none} .action-buttons, .question-actions, .knowledge-note .save-note-btn {display:none} .knowledge-note textarea { border: 1px dashed #ccc; } @media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style></head><body data-theme="light"><h1>核心知识库</h1>${contentToPrint}</body></html>`);
         printWindow.document.close();
         setTimeout(() => { printWindow.focus(); printWindow.print(); printWindow.close(); }, 500);
     });
