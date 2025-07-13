@@ -85,8 +85,6 @@ body {
 [data-theme="dark"] .theme-switcher .moon { display: block; }
 [data-theme="dark"] .theme-switcher .sun { display: none; }
 
-.history-link { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 20px; background-color: var(--accent); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; margin-bottom: 30px; transition: all 0.2s var(--ease-out); }
-.history-link:hover { background-color: var(--accent-hover); transform: translateY(-2px); box-shadow: var(--shadow); }
 .section-title { font-size: 1.5em; font-weight: 700; margin: 40px 0 20px; text-align: center; color: var(--text-primary); }
 .module-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); gap: 15px; }
 .module-link { display: flex; align-items: center; justify-content: center; aspect-ratio: 1 / 1; text-decoration: none; font-weight: 600; font-size: 1.2em; color: var(--accent); background-color: var(--bg-primary); border: 2px solid var(--border); border-radius: 16px; transition: all 0.2s var(--ease-out); }
@@ -126,7 +124,7 @@ body {
 .note-section summary { cursor: pointer; font-weight: 600; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; }
 .note-content { margin-top: 10px; }
 .note-section textarea { width: 100%; min-height: 80px; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background-color: var(--bg-primary); color: var(--text-primary); box-sizing: border-box; }
-.note-section .save-note-btn { background-color: var(--success); margin-top: 10px; float: right; font-weight: 500; font-size: 0.9em; padding: 8px 16px; border-radius: 8px; color: white; border: none; cursor: pointer; }
+.note-section .save-note-btn { background-color: var(--success); margin-top: 10px; float: right; font-weight: 500; }
 .footer-buttons { display: flex; gap: 10px; }
 button.check-btn, button.ai-btn { font-size: 1em; font-weight: 600; padding: 12px 24px; border-radius: 12px; border: none; cursor: pointer; transition: all 0.3s; color: var(--bg-secondary); }
 button.check-btn { background-color: var(--accent); }
@@ -139,17 +137,19 @@ button.ai-btn:hover { background-color: color-mix(in srgb, var(--text-secondary)
 @keyframes blink { 50% { opacity: 0; } }
 .action-buttons { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 20px; }
 #print-btn { background-color: var(--accent); font-weight: 500; }
-.knowledge-point .options { pointer-events: none; }
-.knowledge-point ul { list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 10px; }
-.knowledge-point li { padding: 12px; border-radius: 12px; border: 1px solid var(--border); }
-.knowledge-point .correct { border-color: var(--success); background-color: color-mix(in srgb, var(--success) 10%, transparent); color: var(--success); font-weight: 600; }
-.knowledge-point .correct em { color: var(--success); }
+.clear-btn { background-color: var(--danger); color: white; font-weight: 500; display: block; margin: 20px auto; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; }
+.history-item { display: flex; align-items: center; justify-content: space-between; padding: 15px; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; text-decoration: none; color: var(--text-primary); transition: all 0.2s var(--ease-out); }
+.history-item:hover { background-color: var(--bg-primary); border-color: var(--accent); }
+.history-info p { margin: 0; font-weight: 500; }
+.history-info span { font-size: 0.85em; color: var(--text-secondary); }
+.knowledge-point { margin-bottom: 20px; padding: 20px; border-radius: 16px; background-color: var(--bg-primary); border: 1px solid var(--border); }
+.knowledge-point h4 { margin-top: 0; line-height: var(--line-height-title); }
+.knowledge-point ul { list-style: none; padding-left: 0; }
+.knowledge-point li { padding: 5px; border-radius: 3px; margin-bottom: 5px; }
+.knowledge-point .correct { color: var(--success); font-weight: bold; }
 .knowledge-point .incorrect { color: var(--danger); }
-.knowledge-point .incorrect em { color: var(--danger); }
-.knowledge-note { margin-top: 20px; }
-.knowledge-note-header { font-weight: 600; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-.knowledge-note textarea { width: 100%; min-height: 80px; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background-color: var(--bg-primary); color: var(--text-primary); box-sizing: border-box; }
-.knowledge-note .save-note-btn { background-color: var(--success); margin-top: 10px; float: right; font-weight: 500; font-size: 0.9em; padding: 8px 16px; border-radius: 8px; color: white; border: none; cursor: pointer; }
+.knowledge-point em { font-size: 0.9em; color: var(--text-secondary); }
+.knowledge-note { margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--border); }
 #toast-container { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; }
 .toast { background-color: #222; color: #fff; padding: 12px 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.2); opacity: 0; transform: translateY(20px); transition: opacity 0.3s, transform 0.3s; }
 .toast.show { opacity: 1; transform: translateY(0); }

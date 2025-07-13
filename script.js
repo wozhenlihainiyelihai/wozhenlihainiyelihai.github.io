@@ -46,6 +46,7 @@ function checkAnswer(questionId) {
         feedbackEl.className = 'feedback incorrect';
         logError(questionId);
     }
+    logAnsweredQuestion(questionId, qBlock.dataset.module);
 }
 
 function logError(questionId) {
@@ -86,34 +87,20 @@ function saveNote(questionId) {
 }
 
 function removeStoredItem(type, id) {
-    // In knowledge view, we remove from both lists
-    if (type === 'knowledge') {
-        let errors = getStoreArray('maogaiErrors');
-        let favorites = getStoreArray('maogaiFavorites');
-        const errorIndex = errors.indexOf(String(id));
-        const favIndex = favorites.indexOf(String(id));
-        if (errorIndex > -1) errors.splice(errorIndex, 1);
-        if (favIndex > -1) favorites.splice(favIndex, 1);
-        setStore('maogaiErrors', errors);
-        setStore('maogaiFavorites', favorites);
-    } else { // In error or favorite view
-        const key = type === 'errors' ? 'maogaiErrors' : 'maogaiFavorites';
-        let items = getStoreArray(key);
-        const newItems = items.filter(itemId => itemId != id);
-        setStore(key, newItems);
-    }
+    const key = type === 'errors' ? 'maogaiErrors' : 'maogaiFavorites';
+    let items = getStoreArray(key);
+    const newItems = items.filter(itemId => itemId != id);
+    setStore(key, newItems);
     
     const elementToRemove = document.getElementById(`q-${id}`);
-    if (elementToRemove) {
-        elementToRemove.style.transition = 'opacity 0.3s, transform 0.3s';
-        elementToRemove.style.opacity = '0';
-        elementToRemove.style.transform = 'scale(0.95)';
-        setTimeout(() => elementToRemove.remove(), 300);
-    }
+    elementToRemove.style.transition = 'opacity 0.3s, transform 0.3s';
+    elementToRemove.style.opacity = '0';
+    elementToRemove.style.transform = 'scale(0.95)';
+    setTimeout(() => elementToRemove.remove(), 300);
     showToast('已移除');
 }
 
-// --- AI Explanation ---
+// --- AI Explanation (OpenAI) ---
 async function getAIExplanation(questionId) {
     const question = ALL_QUESTIONS.find(q => q.id == questionId);
     if (!question) return;
@@ -123,31 +110,75 @@ async function getAIExplanation(questionId) {
     aiSection.style.display = 'block';
 
     const optionsString = JSON.stringify(question.options);
-    const prompt = `你是一位精通《毛泽东思想和中国特色社会主义理论体系概论》的专家。请根据2024年版的教材内容，详细解释以下这道题目。请先分析为什么正确答案是正确的，然后逐一分析其他每个选项为什么是错误的。题目：'${question.question}', 选项：${optionsString}, 正确答案是：'${question.answer}'`;
+    const systemPrompt = "你是一位精通2024年版《毛泽东思想和中国特色社会主义理论体系概论》教材的专家。请用中文回答。";
+    const userPrompt = `你现在是一位经验丰富的高校思想政治理论课老师，熟悉2024年最新版《毛泽东思想和中国特色社会主义理论体系概论》教材的全部知识点。
+
+请根据以下多项选择题的内容，逐个选项进行分析，说明每一个选项为什么正确或错误，并在最后总结本题的考查知识点和解题思路，帮助学生更好地掌握相关理论内容。
+
+请使用如下结构进行回答：
+【题目】
+（请补全题干，例如：“中国特色社会主义最本质的特征是（ ）。”）
+
+A. 以人民为中心
+B. 共同富裕
+C. 中国共产党的领导
+D. 社会公平正义
+
+【选项分析】
+
+A选项：（先判断正误，然后解释原因，如：本选项错误。虽然“以人民为中心”是基本立场，但不是最本质的特征。）
+
+B选项：（……）
+
+C选项：（本选项正确。根据教材第×章第×节的内容，中国特色社会主义最本质的特征是中国共产党的领导。）
+
+D选项：（……）
+
+【考查要点总结】
+
+本题考查的是中国特色社会主义的本质特征这一知识点，具体内容见教材第×章×节，核心理解为：党的领导是中国特色社会主义最本质的特征，是中国特色社会主义制度的最大优势。在做题时要注意区分“最本质特征”“最大优势”“根本立场”等相似概念，明确其在教材中的严谨表述。题目：'${question.question}', 选项：${optionsString}, 正确答案是：'${question.answer}'`;
     
+    // --- START: API Configuration ---
+    // 1. 在这里粘贴您的API密钥
+    const apiKey = "sk-MM577Ej46pdPyXj3vKillbbVazNqyidUAHTncGIye5nJft3X"; 
+
+    // 2. 在这里确认您的代理地址
+    const baseUrl = "https://api.chatanywhere.tech"; 
+    // --- END: API Configuration ---
+
+    if (!apiKey) {
+        aiSection.innerHTML = `<p>错误：尚未配置API密钥。请根据指南在 script.js 文件中设置您的密钥。</p>`;
+        return;
+    }
+
     try {
-        let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
-        const payload = { contents: chatHistory };
-        const apiKey = ""; 
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+        const payload = {
+            model: "gpt-3.5-turbo",
+            messages: [
+                { role: "system", content: systemPrompt },
+                { role: "user", content: userPrompt }
+            ]
+        };
         
-        const response = await fetch(apiUrl, {
+        const response = await fetch(`${baseUrl}/chat/completions`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiKey}`
+            },
             body: JSON.stringify(payload)
         });
 
         if (!response.ok) {
-            throw new Error(`API请求失败，状态码: ${response.status}`);
+            const errorData = await response.json();
+            throw new Error(`API请求失败: ${errorData.error.message}`);
         }
 
         const result = await response.json();
         
         let text = "抱歉，解析出错了。";
-        if (result.candidates && result.candidates.length > 0 &&
-            result.candidates[0].content && result.candidates[0].content.parts &&
-            result.candidates[0].content.parts.length > 0) {
-            text = result.candidates[0].content.parts[0].text;
+        if (result.choices && result.choices[0] && result.choices[0].message) {
+            text = result.choices[0].message.content;
         }
         
         // Typewriter effect
@@ -156,7 +187,7 @@ async function getAIExplanation(questionId) {
         let i = 0;
         function typeWriter() {
             if (i < text.length) {
-                p.innerHTML += text.charAt(i).replace(/\n/g, '<br>');
+                p.innerHTML += text.charAt(i).replace(/\\n/g, '<br>');
                 i++;
                 setTimeout(typeWriter, 20);
             }
@@ -164,8 +195,8 @@ async function getAIExplanation(questionId) {
         typeWriter();
 
     } catch (error) {
-        console.error('Gemini API Error:', error);
-        aiSection.innerHTML = `<p>抱歉，AI解析服务暂时不可用。请稍后再试。</p>`;
+        console.error('OpenAI API Error:', error);
+        aiSection.innerHTML = `<p>抱歉，AI解析服务暂时不可用。请检查您的网络连接、API密钥或代理地址是否正确。</p>`;
     }
 }
 
@@ -179,7 +210,7 @@ function setupHistoryTracker(moduleNum) {
                     module: moduleNum,
                     questionId: entry.target.id
                 };
-                localStorage.setItem('maogaiHistory', JSON.stringify(history));
+                sessionStorage.setItem('maogaiCurrentPosition', JSON.stringify(history));
             }
         });
     }, { threshold: 0.5 });
@@ -187,17 +218,91 @@ function setupHistoryTracker(moduleNum) {
     document.querySelectorAll('.question-block').forEach(q => observer.observe(q));
 }
 
-function setupHistoryLink() {
+function logSessionHistory() {
+    const lastPosition = JSON.parse(sessionStorage.getItem('maogaiCurrentPosition') || 'null');
+    if (!lastPosition) return;
+
+    let historyList = getStoreArray('maogaiHistoryList');
+    const question = ALL_QUESTIONS.find(q => q.id == lastPosition.questionId.replace('q-',''));
+    if (!question) return;
+
+    const newEntry = {
+        module: lastPosition.module,
+        questionId: lastPosition.questionId,
+        questionText: question.question,
+        timestamp: new Date().toISOString()
+    };
+
+    // Avoid adding duplicate consecutive entries
+    if (historyList.length > 0 && historyList[0].questionId === newEntry.questionId) {
+        return;
+    }
+
+    historyList.unshift(newEntry);
+    if (historyList.length > 20) { // Keep last 20 sessions
+        historyList.pop();
+    }
+    setStore('maogaiHistoryList', historyList);
+}
+
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+        logSessionHistory();
+    }
+});
+
+function loadHistoryPage() {
     document.addEventListener('DOMContentLoaded', () => {
-        const history = JSON.parse(localStorage.getItem('maogaiHistory') || 'null');
-        if (history) {
-            const container = document.getElementById('history-link-container');
-            const link = document.getElementById('history-link');
-            link.href = `module_${history.module}.html#${history.questionId}`;
-            container.style.display = 'block';
+        const historyList = getStoreArray('maogaiHistoryList');
+        const container = document.getElementById('content-container');
+        const clearBtn = document.getElementById('clear-history-btn');
+
+        if (historyList.length === 0) {
+            container.innerHTML = '<p style="text-align:center; color: var(--text-secondary);">还没有历史记录哦。</p>';
+            clearBtn.style.display = 'none';
+            return;
         }
+
+        container.innerHTML = historyList.map(item => {
+            const question = ALL_QUESTIONS.find(q => q.id == item.questionId.replace('q-',''));
+            if (!question) return '';
+            const localId = question.id; // Or calculate if needed
+            return `
+                <a href="module_${item.module}.html#${item.questionId}" class="history-item">
+                    <div class="history-info">
+                        <p>模块 ${item.module} - 题目 ${localId}</p>
+                        <span>${item.questionText.substring(0, 40)}...</span>
+                    </div>
+                    <span class="history-time">${formatTimeAgo(item.timestamp)}</span>
+                </a>
+            `;
+        }).join('');
+
+        clearBtn.addEventListener('click', () => {
+            if (confirm('确定要清空所有历史记录吗？')) {
+                localStorage.removeItem('maogaiHistoryList');
+                loadHistoryPage(); // Reload the content
+            }
+        });
     });
 }
+
+function formatTimeAgo(isoString) {
+    const date = new Date(isoString);
+    const now = new Date();
+    const diffInSeconds = Math.floor((now - date) / 1000);
+
+    if (diffInSeconds < 60) return '刚刚';
+    const diffInMinutes = Math.floor(diffInSeconds / 60);
+    if (diffInMinutes < 60) return `${diffInMinutes}分钟前`;
+    const diffInHours = Math.floor(diffInMinutes / 60);
+    if (diffInHours < 24) return `${diffInHours}小时前`;
+    const diffInDays = Math.floor(diffInHours / 24);
+    if (diffInDays < 7) return `${diffInDays}天前`;
+    
+    return date.toLocaleDateString();
+}
+
 
 function loadAllNotes() {
     const notes = getStore('maogaiNotes');
@@ -228,7 +333,7 @@ function loadContent(type) {
             const errorIds = getStoreArray('maogaiErrors');
             const favoriteIds = getStoreArray('maogaiFavorites');
             const notedIds = Object.keys(getStore('maogaiNotes'));
-            ids = [...new Set([...errorIds, ...favoriteIds, ...notedIds.map(String)])].sort((a, b) => parseInt(a) - parseInt(b));
+            ids = [...new Set([...errorIds, ...favoriteIds, ...notedIds])].sort((a, b) => parseInt(a) - parseInt(b));
         }
 
         if (!ids || ids.length === 0) {
@@ -267,7 +372,7 @@ function loadContent(type) {
 // --- HTML Generators ---
 function generateQuestionHTML(q, localId, pageType) {
     const globalId = q.id;
-    const displayId = localId || globalId;
+    const displayId = localId || q.id;
     const q_type = q.answer instanceof Array || (typeof q.answer === 'string' && q.answer.length > 1 && !['正确','错误'].includes(q.answer)) ? '多选' : '单选';
     const normalized_answer = q.answer instanceof Array ? q.answer.sort().join('') : String(q.answer);
     let opts = q.options;
